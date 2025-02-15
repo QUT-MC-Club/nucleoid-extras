@@ -1,6 +1,7 @@
 package xyz.nucleoid.extras.lobby.item;
 
 import eu.pb4.polymer.core.api.item.PolymerItem;
+import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.WrittenBookContentComponent;
 import net.minecraft.entity.player.PlayerEntity;
@@ -22,6 +23,7 @@ import net.minecraft.util.Util;
 import net.minecraft.world.World;
 import xyz.nucleoid.extras.NucleoidExtrasConfig;
 import xyz.nucleoid.extras.RulesConfig;
+import xyz.nucleoid.extras.model.NEModels;
 import xyz.nucleoid.packettweaker.PacketContext;
 import xyz.nucleoid.server.translations.api.LocalizationTarget;
 import xyz.nucleoid.server.translations.api.language.ServerLanguage;
@@ -88,6 +90,9 @@ public class RuleBookItem extends Item implements PolymerItem {
 
     @Override
     public Identifier getPolymerItemModel(ItemStack stack, PacketContext context) {
+        if (PolymerResourcePackUtils.hasMainPack(context)) {
+            return NEModels.DARULES;
+        }
         return null;
     }
 }

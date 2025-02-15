@@ -40,6 +40,7 @@ public class NEModelProvider implements DataProvider {
 
     private void createItems() {
         spriteItem(NEModels.CONTROLLER);
+        spriteItem(NEModels.DARULES);
     }
 
     private void spriteItem(Identifier id) {
