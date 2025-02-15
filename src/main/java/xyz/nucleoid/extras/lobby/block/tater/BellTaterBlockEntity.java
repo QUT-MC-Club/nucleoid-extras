@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.collectable;
+package xyz.nucleoid.extras.lobby.block.tater;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BellBlockEntity;
@@ -15,7 +15,7 @@ import xyz.nucleoid.extras.lobby.NEBlocks;
 
 import java.util.List;
 
-public class BellCollectableBlockEntity extends BlockEntity {
+public class BellTaterBlockEntity extends BlockEntity {
 	private long lastRingTime;
 	public int ringTicks;
 	public boolean ringing;
@@ -23,7 +23,7 @@ public class BellCollectableBlockEntity extends BlockEntity {
 	private boolean resonating;
 	private int resonateTime;
 
-	public BellCollectableBlockEntity(BlockPos pos, BlockState state) {
+	public BellTaterBlockEntity(BlockPos pos, BlockState state) {
 		super(NEBlocks.BELL_TATER_ENTITY, pos, state);
 	}
 
@@ -38,7 +38,7 @@ public class BellCollectableBlockEntity extends BlockEntity {
 		return super.onSyncedBlockEvent(type, data);
 	}
 
-	private static void tick(World world, BlockPos pos, BlockState state, BellCollectableBlockEntity blockEntity, BellBlockEntity.Effect bellEffect) {
+	private static void tick(World world, BlockPos pos, BlockState state, BellTaterBlockEntity blockEntity, BellBlockEntity.Effect bellEffect) {
 		if (blockEntity.ringing) {
 			++blockEntity.ringTicks;
 		}
@@ -60,12 +60,12 @@ public class BellCollectableBlockEntity extends BlockEntity {
 		}
 	}
 
-	public static void clientTick(World world, BlockPos pos, BlockState state, BellCollectableBlockEntity blockEntity) {
-		BellCollectableBlockEntity.tick(world, pos, state, blockEntity, BellBlockEntity::applyParticlesToRaiders);
+	public static void clientTick(World world, BlockPos pos, BlockState state, BellTaterBlockEntity blockEntity) {
+		BellTaterBlockEntity.tick(world, pos, state, blockEntity, BellBlockEntity::applyParticlesToRaiders);
 	}
 
-	public static void serverTick(World world, BlockPos pos, BlockState state, BellCollectableBlockEntity blockEntity) {
-		BellCollectableBlockEntity.tick(world, pos, state, blockEntity, BellBlockEntity::applyGlowToRaiders);
+	public static void serverTick(World world, BlockPos pos, BlockState state, BellTaterBlockEntity blockEntity) {
+		BellTaterBlockEntity.tick(world, pos, state, blockEntity, BellBlockEntity::applyGlowToRaiders);
 	}
 
 	/**

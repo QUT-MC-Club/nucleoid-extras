@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.collectable;
+package xyz.nucleoid.extras.lobby.block.tater;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;

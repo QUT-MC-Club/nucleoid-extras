@@ -15,12 +15,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import xyz.nucleoid.extras.component.NEDataComponentTypes;
 import xyz.nucleoid.extras.component.TaterSelectionComponent;
-import xyz.nucleoid.extras.lobby.block.collectable.TinyPotatoBlock;
+import xyz.nucleoid.extras.lobby.block.tater.TinyPotatoBlock;
 import xyz.nucleoid.extras.mixin.lobby.ArmorStandEntityAccessor;
 import xyz.nucleoid.extras.tag.NEBlockTags;
 

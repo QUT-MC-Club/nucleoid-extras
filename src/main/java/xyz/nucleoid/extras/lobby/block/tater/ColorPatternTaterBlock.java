@@ -1,14 +1,14 @@
-package xyz.nucleoid.extras.lobby.block.collectable;
+package xyz.nucleoid.extras.lobby.block.tater;
 
 import net.minecraft.particle.DustParticleEffect;
 import net.minecraft.particle.ParticleEffect;
 
 import java.util.Arrays;
 
-public class ColorPatternCollectableBlock extends CubicCollectableBlock {
+public class ColorPatternTaterBlock extends CubicPotatoBlock {
     private final ParticleEffect[] particleEffects;
 
-    public ColorPatternCollectableBlock(Settings settings, int[] pattern, String texture) {
+    public ColorPatternTaterBlock(Settings settings, int[] pattern, String texture) {
         super(settings, (ParticleEffect) null, texture);
 
         this.particleEffects = Arrays.stream(pattern).mapToObj(color ->

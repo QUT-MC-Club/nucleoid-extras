@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.collectable;
+package xyz.nucleoid.extras.lobby.block.tater;
 
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.Block;
@@ -23,19 +23,19 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-public class TargetCollectableBlock extends CubicCollectableBlock {
+public class TargetTaterBlock extends CubicPotatoBlock {
 	private static final IntProperty POWER = Properties.POWER;
 	private static final int RECOVERABLE_POWER_DELAY = 20;
 	private static final int REGULAR_POWER_DELAY = 8;
 
-	public TargetCollectableBlock(Settings settings, String texture) {
+	public TargetTaterBlock(Settings settings, String texture) {
 		super(settings, Blocks.TARGET, texture);
 		this.setDefaultState(this.stateManager.getDefaultState().with(POWER, 0));
 	}
 
 	@Override
 	public void onProjectileHit(World world, BlockState state, BlockHitResult hit, ProjectileEntity projectile) {
-		int power = TargetCollectableBlock.trigger(world, state, hit, projectile);
+		int power = TargetTaterBlock.trigger(world, state, hit, projectile);
 		Entity entity = projectile.getOwner();
 		if (entity instanceof ServerPlayerEntity player) {
 			player.incrementStat(Stats.TARGET_HIT);
@@ -44,10 +44,10 @@ public class TargetCollectableBlock extends CubicCollectableBlock {
 	}
 
 	private static int trigger(WorldAccess world, BlockState state, BlockHitResult hitResult, Entity entity) {
-		int power = TargetCollectableBlock.calculatePower(hitResult, hitResult.getPos());
+		int power = TargetTaterBlock.calculatePower(hitResult, hitResult.getPos());
 		int delay = entity instanceof PersistentProjectileEntity ? RECOVERABLE_POWER_DELAY : REGULAR_POWER_DELAY;
 		if (!world.getBlockTickScheduler().isQueued(hitResult.getBlockPos(), state.getBlock())) {
-			TargetCollectableBlock.setPower(world, state, power, hitResult.getBlockPos(), delay);
+			TargetTaterBlock.setPower(world, state, power, hitResult.getBlockPos(), delay);
 		}
 		return power;
 	}

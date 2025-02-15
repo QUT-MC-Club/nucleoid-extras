@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.collectable;
+package xyz.nucleoid.extras.lobby.block.tater;
 
 import it.unimi.dsi.fastutil.longs.LongArrayList;
 import it.unimi.dsi.fastutil.longs.LongList;
@@ -14,11 +14,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.event.BlockPositionSource;
 import xyz.nucleoid.extras.tag.NEBlockTags;
 
-public class WardenCollectableBlock extends CubicCollectableBlock {
+public class WardenTaterBlock extends CubicPotatoBlock {
     private static final int BOX_SIZE = 16;
     private static final int ARRIVAL_TICKS = SharedConstants.TICKS_PER_SECOND;
 
-    public WardenCollectableBlock(Settings settings, String texture) {
+    public WardenTaterBlock(Settings settings, String texture) {
         super(settings, (ParticleEffect) null, texture);
     }
 

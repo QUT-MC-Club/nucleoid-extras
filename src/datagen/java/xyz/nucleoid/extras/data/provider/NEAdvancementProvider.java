@@ -21,7 +21,7 @@ import xyz.nucleoid.extras.NucleoidExtras;
 import xyz.nucleoid.extras.lobby.NEBlocks;
 import xyz.nucleoid.extras.lobby.NECriteria;
 import xyz.nucleoid.extras.lobby.NEItems;
-import xyz.nucleoid.extras.lobby.block.collectable.TinyPotatoBlock;
+import xyz.nucleoid.extras.lobby.block.tater.TinyPotatoBlock;
 import xyz.nucleoid.extras.lobby.criterion.TaterCollectedCriterion;
 import xyz.nucleoid.extras.lobby.criterion.TaterCount;
 import xyz.nucleoid.extras.lobby.criterion.WearTaterCriterion;
@@ -35,7 +35,7 @@ public class NEAdvancementProvider extends FabricAdvancementProvider {
     public void generateAdvancement(RegistryWrapper.WrapperLookup registries, Consumer<AdvancementEntry> consumer) {
         var root = accept(consumer, "root", null, Advancement.Builder.createUntelemetered()
                 .display(
-                        NEItems.QUTMC_LOGO,
+                        NEItems.NUCLEOID_LOGO,
                         Text.translatable("advancements.nucleoid_extras.root.title"),
                         Text.translatable("advancements.nucleoid_extras.root.description"),
                         Identifier.ofVanilla("textures/block/lime_concrete.png"),

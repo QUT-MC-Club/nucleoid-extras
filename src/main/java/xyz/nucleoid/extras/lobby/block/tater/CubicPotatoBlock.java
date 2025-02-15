@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.collectable;
+package xyz.nucleoid.extras.lobby.block.tater;
 
 import eu.pb4.polymer.core.api.block.PolymerHeadBlock;
 import net.minecraft.block.Block;
@@ -16,36 +16,37 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationPropertyHelper;
+import xyz.nucleoid.extras.util.SkinEncoder;
 import xyz.nucleoid.packettweaker.PacketContext;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CubicCollectableBlock extends TinyPotatoBlock implements PolymerHeadBlock {
-    protected static final List<CubicCollectableBlock> CUBIC_TATERS = new ArrayList<>();
+public class CubicPotatoBlock extends TinyPotatoBlock implements PolymerHeadBlock {
+    protected static final List<CubicPotatoBlock> CUBIC_TATERS = new ArrayList<>();
 
-    public CubicCollectableBlock(Settings settings, ParticleEffect particleEffect, String texture, int particleRate) {
+    public CubicPotatoBlock(Settings settings, ParticleEffect particleEffect, String texture, int particleRate) {
         super(settings, texture, particleEffect, particleRate);
         CUBIC_TATERS.add(this);
     }
 
-    public CubicCollectableBlock(Settings settings, ParticleEffect particleEffect, String texture) {
+    public CubicPotatoBlock(Settings settings, ParticleEffect particleEffect, String texture) {
         this(settings, particleEffect, texture, 2);
     }
 
-    public CubicCollectableBlock(Settings settings, BlockState particleState, String texture) {
+    public CubicPotatoBlock(Settings settings, BlockState particleState, String texture) {
         this(settings, new BlockStateParticleEffect(ParticleTypes.BLOCK, particleState), texture);
     }
 
-    public CubicCollectableBlock(Settings settings, Block particleBlock, String texture) {
+    public CubicPotatoBlock(Settings settings, Block particleBlock, String texture) {
         this(settings, particleBlock.getDefaultState(), texture);
     }
 
-    public CubicCollectableBlock(Settings settings, ItemStack particleStack, String texture) {
+    public CubicPotatoBlock(Settings settings, ItemStack particleStack, String texture) {
         this(settings, new ItemStackParticleEffect(ParticleTypes.ITEM, particleStack), texture);
     }
 
-    public CubicCollectableBlock(Settings settings, Item particleItem, String texture) {
+    public CubicPotatoBlock(Settings settings, Item particleItem, String texture) {
         this(settings, new ItemStack(particleItem), texture);
     }
 

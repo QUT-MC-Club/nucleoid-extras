@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.collectable;
+package xyz.nucleoid.extras.lobby.block.tater;
 
 import net.minecraft.SharedConstants;
 import net.minecraft.block.Block;
@@ -27,14 +27,14 @@ import net.minecraft.world.block.WireOrientation;
 import xyz.nucleoid.extras.lobby.NEBlocks;
 import xyz.nucleoid.extras.mixin.BlockWithEntityAccessor;
 
-public class NoteCollectableBlock extends CubicCollectableBlock implements BlockEntityProvider {
+public class TateroidBlock extends CubicPotatoBlock implements BlockEntityProvider {
     private static final BooleanProperty POWERED = Properties.POWERED;
     private static final int FULL_DURATION = 15 * SharedConstants.TICKS_PER_SECOND;
 
     private final RegistryEntry<SoundEvent> defaultSound;
     private final double particleColor;
 
-    public NoteCollectableBlock(Settings settings, RegistryEntry<SoundEvent> defaultSound, double particleColor, String texture) {
+    public TateroidBlock(Settings settings, RegistryEntry<SoundEvent> defaultSound, double particleColor, String texture) {
         super(settings, ParticleTypes.NOTE, texture);
 
         this.defaultSound = defaultSound;
@@ -147,11 +147,11 @@ public class NoteCollectableBlock extends CubicCollectableBlock implements Block
 
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new NoteCollectableBlockEntity(pos, state);
+        return new TateroidBlockEntity(pos, state);
     }
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return world.isClient() ? null : BlockWithEntityAccessor.validateTicker(type, NEBlocks.TATEROID_ENTITY, NoteCollectableBlockEntity::serverTick);
+        return world.isClient() ? null : BlockWithEntityAccessor.validateTicker(type, NEBlocks.TATEROID_ENTITY, TateroidBlockEntity::serverTick);
     }
 }
