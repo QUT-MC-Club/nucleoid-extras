@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 import xyz.nucleoid.extras.util.SkinEncoder;
 import xyz.nucleoid.packettweaker.PacketContext;
 
-public class DiceTaterBlock extends CubicPotatoBlock {
+public class DiceCollectableBlock extends CubicCollectableBlock {
     private static final int ROLLING_FACE = 0;
     private static final int MAX_FACE = 6;
     private static final int ROLLING_TICKS = 8;
@@ -33,7 +33,7 @@ public class DiceTaterBlock extends CubicPotatoBlock {
         SkinEncoder.encode("9c40bf70f1648b7ee438a6a22904228ab5fbbd4926af30ae8ade4df01b8d7413"),
     };
 
-    public DiceTaterBlock(Settings settings) {
+    public DiceCollectableBlock(Settings settings) {
         super(settings, ParticleTypes.POOF, TEXTURES[6]);
 
         this.setDefaultState(this.stateManager.getDefaultState().with(FACE, 1));

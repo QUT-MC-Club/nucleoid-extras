@@ -28,12 +28,12 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.DyeColor;
 import xyz.nucleoid.extras.NucleoidExtras;
 import xyz.nucleoid.extras.lobby.block.*;
-import xyz.nucleoid.extras.lobby.block.tater.*;
+import xyz.nucleoid.extras.lobby.block.collectable.*;
 
 import java.util.function.Function;
 
 public class NEBlocks {
-    public static final Block NUCLEOID_LOGO = registerTaterBlock("nucleoid_logo", ParticleTypes.GLOW_SQUID_INK, "bac7400dfcb9a387361a3ad7c296943eb841a9bda13ad89558e2d6efebf167bc");
+    public static final Block QUTMC_LOGO = registerTaterBlock("nucleoid_logo", ParticleTypes.GLOW_SQUID_INK, "ewogICJ0aW1lc3RhbXAiIDogMTcyNjkwMTk1NzExOCwKICAicHJvZmlsZUlkIiA6ICJkMWRkMDJlOWQwN2E0YWU1YWRjYWQyYzI5YTZhYmIyMCIsCiAgInByb2ZpbGVOYW1lIiA6ICJSYW5pdGFfRmFjaGExOCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8zYWJmOWQ3NWQzODhiNjFjZTk2YWE2NzhjOTY4YjViM2FlMDE3MzRlYzJiMjA5NzU1OWE2ZDcwYTljODU3MDZjIgogICAgfQogIH0KfQ==");
 
     public static final Block END_PORTAL = registerSimple("end_portal", Blocks.END_PORTAL);
     public static final Block END_GATEWAY = register("end_gateway", AbstractBlock.Settings.create().pistonBehavior(PistonBehavior.BLOCK).strength(100).noCollision(), settings -> new VirtualEndGatewayBlock(settings));
@@ -90,40 +90,6 @@ public class NEBlocks {
     public static final Block TRANSIENT_WAXED_OXIDIZED_COPPER_DOOR = register("transient_waxed_oxidized_copper_door", AbstractBlock.Settings.copy(Blocks.WAXED_OXIDIZED_COPPER_DOOR), settings -> new TransientDoorBlock(Blocks.WAXED_OXIDIZED_COPPER_DOOR, settings));
 
     public static final Block NUCLE_PAST_LOGO = registerTaterBlock("nucle_past_logo", new DustParticleEffect(0x52C471, 1), "65ed3e4d6ec42bd84d2b5e452087d454aac141a978540f6d200bd8aa863d4db8");
-
-    public static final Block TINY_POTATO = registerTaterBlock("tiny_potato", ParticleTypes.HEART, "573514a23245f15dbad5fb4e622163020864cce4c15d56de3adb90fa5a7137fd");
-    public static final Block BOTANICAL_TINY_POTATO = registerBotanicTaterBlock("botanical_potato", ParticleTypes.HEART,
-        "39e878c52870c640b5985c67df70059120b61b26c77a5cf86042c04c13477d7b",
-        "582f367eabffc9ecd8ab870c9f5f5c8b43215d5eb922cfb193aed70fcf694e92"
-    );
-    public static final Block IRRITATER = registerTaterBlock("irritater", ParticleTypes.ANGRY_VILLAGER, "14b2cbfe1fd4d3123461081ad460acb6c0345bed3f3ce96d475b5f58f7b9030b");
-    public static final Block SAD_TATER = registerTaterBlock("sad_tater", ParticleTypes.FALLING_WATER, "7915f5ab6a3af5fd8e043bc98a5466acfc5d57c30dc9a1d2e4a32f7bfa1d35bf");
-    public static final Block FLOWERING_AZALEA_TATER = registerTaterBlock("flowering_azalea_tater", Blocks.FLOWERING_AZALEA_LEAVES, "ab6c05d3be9369c69984513f281932622bca807008def997222a6d4f8cb71d83");
-    public static final Block STONE_TATER = registerTaterBlock("stone_tater", Blocks.STONE, "62e56013a5f6399b5fb91bb620dc240bb04eb7d1d71e0811853058b6d5ed6291");
-    public static final Block CALCITE_TATER = registerTaterBlock("calcite_tater", Blocks.CALCITE, "ed8d2215b560c6755a1224d33041814c5ede9638ccb480a92baf79390080e687");
-    public static final Block TUFF_TATER = registerTaterBlock("tuff_tater", Blocks.TUFF, "8612a9dfbe1906113c8ff80ba724af1dcf8ad68f95cf15f8a29931b82db5bada");
-    public static final Block BASALT_TATER = registerTaterBlock("basalt_tater", ParticleTypes.WHITE_ASH, "c3038dfba5fc6877891d5a6c904f3e90c5ce8d76b630314a1b851b3d67e79fea");
-    public static final Block DRIPSTONE_TATER = registerTaterBlock("dripstone_tater", Blocks.DRIPSTONE_BLOCK, "906ea8dce1162e46353d9369fb9313e8ec2a63e64eaa617b02fe5f39073d06d8");
-    public static final Block AMETHYST_TATER = registerTaterBlock("amethyst_tater", Blocks.AMETHYST_BLOCK, "a0972dbf71067c17a01a6130586a8f0af80b267c4c1c7407eee059214a02da58");
-    public static final Block PACKED_ICE_TATER = registerTaterBlock("packed_ice_tater", Blocks.PACKED_ICE, "5ee41f4bbc38815b497ab0bff1a981a7cd2121b539661662df4f2851500737e3");
-    public static final Block BLUE_ICE_TATER = registerTaterBlock("blue_ice_tater", Blocks.BLUE_ICE, "fb00ec6cb1928448fd72add4352643a7d04dc1fb54cbb37d8094844a84646830");
-    public static final Block FLAME_TATER = registerTaterBlock("flame_tater", ParticleTypes.FLAME, "969a0e61b1ebf03a23a6e5885d133c0055f7755c3b63e3fb2ac475aaf4d87467");
-    public static final Block PUZZLE_CUBE_TATER = registerTaterBlock("puzzle_cube_tater", ParticleTypes.FIREWORK, "41f8da5c342e799bfae154c16627b6190923eae27735ef7ffbdeb1a121c8811b");
-    public static final Block LUCKY_TATER = registerLuckyTaterBlock("lucky_tater", "7417598f8d30dd3582ce723a1303abeeca9ac6a96438967b7f4c043fe3562ebb", "a590c5d7d05cd4ad1747b7b4e265dc97a07b054175e1f25b488c2de021075329");
-    public static final Block CRATE_TATER = registerTaterBlock("crate_tater", ParticleTypes.WAX_ON, "5b7d34f16ef9a361964ce7405b6b463f60cc214bdb625e089869c50f5332f61e");
-    public static final Block TATER_OF_UNDYING = registerTaterBlock("tater_of_undying", ParticleTypes.TOTEM_OF_UNDYING, "b526d93147825e2db444aaf4a9464b61ad4e4defb0adf944a2275543efc9192a");
-    public static final Block CRYING_OBSIDIAN_TATER = registerTaterBlock("crying_obsidian_tater", ParticleTypes.DRIPPING_OBSIDIAN_TEAR, "70d151a2da83b4a0ec73be08a42c4bc8964ff1d3ae2106cc29b9b79cfccb8b9f");
-    public static final Block FLIPPED_TATER = registerTaterBlock("flipped_tater", ParticleTypes.DAMAGE_INDICATOR, "9c1e33c4b7e6cb58e699aeb7ae412329f35cb443e50743c8896ed36dfb6a3588");
-    public static final Block BACKWARD_TATER = registerTaterBlock("backward_tater", ParticleTypes.HEART, "c3d2eefca5fa2e0cc710fe067f4a7114df0f430eeaaa1d9c373e4c91c9ed0ea4");
-    public static final Block UPWARD_TATER = registerTaterBlock("upward_tater", ParticleTypes.HEART, "60860143fea936066220eae3a31cdfe5aa9b4e525e194aa965c02272a01cb5c8");
-    public static final Block SANTA_HAT_TATER = registerTaterBlock("santa_hat_tater", ParticleTypes.SNOWFLAKE, "7609f3510b29bfa1504b7d3d53f466e7628a1cebd102573601db33e1ced88c4e");
-
-    public static final Block SKELETATER = registerTaterBlock("skeletater", Blocks.BONE_BLOCK, "f472e2fc36c7d8ef7cff8cfba71e7e238f89de01e8d44c21703f1ac6d2c47f1");
-    public static final Block WITHER_SKELETATER = registerTaterBlock("wither_skeletater", Blocks.SOUL_SAND, "2c739e03aaf98f1e972e23122423f82164bceadce39221fa7f6909d90eb05223");
-    public static final Block ZOMBIE_TATER = registerTaterBlock("zombie_tater", Items.ROTTEN_FLESH, "9495d6aa5ef185062e8d9d1ba1721d5144e24155244f53ea4129038f977a0735");
-    public static final Block CREEPER_TATER = registerTaterBlock("creeper_tater", ParticleTypes.EXPLOSION, "81428b1867a1b25cfce24ae821986653b1eb9dc253630ab82b695c2cbb6d1e52", 10);
-    public static final Block STEVE_TATER = registerTaterBlock("steve_tater", ParticleTypes.HAPPY_VILLAGER, "ce7cc05bee993cd701a742415b09156381a54aaa7ad5971941722e32dd6ef3f2");
-    public static final Block ALEX_TATER = registerTaterBlock("alex_tater", ParticleTypes.HAPPY_VILLAGER, "e1f7dc909b2d6c679ffb4c69c8d7c8ed39cf47a83330113f8fe45ac4b0a483c8");
 
     public static final Block TRANS_TATER = registerColorPatternTaterBlock("trans_tater", new int[]{
         0xEE90AD, // pink
@@ -182,7 +148,7 @@ public class NEBlocks {
     }, "32b7cd2c5d70cab476ce951e2c520c9b3579250ad900164d6c2321c7f43d6dc7");
 
     public static final Block WARDEN_TATER = registerWardenTaterBlock("warden_tater", "52e411aa1501c72d99d738cb38e250a395c6604b8bccc9f29d7f26e9cacd8d6f");
-    public static final Block CREAKING_TATER = registerGlowingLayerTaterBlock("creaking_tater", new BlockStateParticleEffect(ParticleTypes.BLOCK_CRUMBLE, Blocks.PALE_OAK_WOOD.getDefaultState()), "ba2adfd9b68769ba7ecd4b35d904c7756d1e232e7f2b9cbcbdf49f6a34162e54", GlowingLayerTaterBlock.Pixel.CREAKING);
+    public static final Block CREAKING_TATER = registerGlowingLayerTaterBlock("creaking_tater", new BlockStateParticleEffect(ParticleTypes.BLOCK_CRUMBLE, Blocks.PALE_OAK_WOOD.getDefaultState()), "ba2adfd9b68769ba7ecd4b35d904c7756d1e232e7f2b9cbcbdf49f6a34162e54", GlowingLayerCollectableBlock.Pixel.CREAKING);
     public static final Block VIRAL_TATER = registerTaterBlock("viral_tater", ParticleTypes.SCRAPE, "b12f770c4542c9f26ba03aaee686e0946698d394a8e745d3eac6013383dcff29");
     public static final Block DICE_TATER = registerDiceTaterBlock("dice_tater");
     public static final Block TATEROID = registerTateroidBlock("tateroid", SoundEvents.BLOCK_NOTE_BLOCK_BELL, -1, "8d531d40d09efd3a9a585b55e66a9a6f04c73af84d94d7c565549bf27b8b26bd");
@@ -437,15 +403,15 @@ public class NEBlocks {
     public static final Block SILVER_CAPSULE_TATER = registerCapsuleTaterBlock("silver_capsule_tater", 0xBFBFBF, 9, "afdce3ea1399dd0b738faaecf89cc5bdcf179b8dc4f3d7964c8cd45c89257fd1");
     public static final Block GOLD_CAPSULE_TATER = registerCapsuleTaterBlock("gold_capsule_tater", 0xF1A00E, 1, "db5388834578ccb906e97d3e54aeb33edcc12d821f081b7eb04830cbd260ad81");
 
-    public static final Block CORRUPTATER = register("corruptater", createTaterBlockSettings(), settings -> new CorruptaterBlock(settings, 2));
+    public static final Block CORRUPTATER = register("corruptater", createTaterBlockSettings(), settings -> new CorruptCollectableBlock(settings, 2));
 
     public static final BlockEntityType<LaunchPadBlockEntity> LAUNCH_PAD_ENTITY = FabricBlockEntityTypeBuilder.create(LaunchPadBlockEntity::new, GOLD_LAUNCH_PAD, IRON_LAUNCH_PAD).build();
     public static final BlockEntityType<ContributorStatueBlockEntity> CONTRIBUTOR_STATUE_ENTITY = FabricBlockEntityTypeBuilder.create(ContributorStatueBlockEntity::new, CONTRIBUTOR_STATUE).build();
     public static final BlockEntityType<InfiniteDispenserBlockEntity> INFINITE_DISPENSER_ENTITY = FabricBlockEntityTypeBuilder.create(InfiniteDispenserBlockEntity::new, INFINITE_DISPENSER).build();
     public static final BlockEntityType<InfiniteDropperBlockEntity> INFINITE_DROPPER_ENTITY = FabricBlockEntityTypeBuilder.create(InfiniteDropperBlockEntity::new, INFINITE_DROPPER).build();
-    public static final BlockEntityType<TateroidBlockEntity> TATEROID_ENTITY = FabricBlockEntityTypeBuilder.create(TateroidBlockEntity::new, TATEROID, RED_TATEROID, ORANGE_TATEROID, YELLOW_TATEROID, GREEN_TATEROID, BLUE_TATEROID, PURPLE_TATEROID).build();
-    public static final BlockEntityType<DaylightDetectorTaterBlockEntity> DAYLIGHT_DETECTOR_TATER_ENTITY = FabricBlockEntityTypeBuilder.create(DaylightDetectorTaterBlockEntity::new, DAYLIGHT_DETECTOR_TATER, INVERTED_DAYLIGHT_DETECTOR_TATER).build();
-    public static final BlockEntityType<BellTaterBlockEntity> BELL_TATER_ENTITY = FabricBlockEntityTypeBuilder.create(BellTaterBlockEntity::new, BELL_TATER).build();
+    public static final BlockEntityType<NoteCollectableBlockEntity> TATEROID_ENTITY = FabricBlockEntityTypeBuilder.create(NoteCollectableBlockEntity::new, TATEROID, RED_TATEROID, ORANGE_TATEROID, YELLOW_TATEROID, GREEN_TATEROID, BLUE_TATEROID, PURPLE_TATEROID).build();
+    public static final BlockEntityType<DaylightDetectorCollectableBlockEntity> DAYLIGHT_DETECTOR_TATER_ENTITY = FabricBlockEntityTypeBuilder.create(DaylightDetectorCollectableBlockEntity::new, DAYLIGHT_DETECTOR_TATER, INVERTED_DAYLIGHT_DETECTOR_TATER).build();
+    public static final BlockEntityType<BellCollectableBlockEntity> BELL_TATER_ENTITY = FabricBlockEntityTypeBuilder.create(BellCollectableBlockEntity::new, BELL_TATER).build();
 
     private static Block registerSimple(String id, Block virtual) {
         return register(id, AbstractBlock.Settings.copy(virtual).strength(100), settings -> new SimplePolymerBlock(settings, virtual));
@@ -456,87 +422,87 @@ public class NEBlocks {
     }
 
     private static Block registerBotanicTaterBlock(String id, ParticleEffect effect, String textureUp, String textureDown) {
-        return register(id, createTaterBlockSettings(), settings -> new BotanicalPotatoBlock(settings, textureUp, textureDown, effect, 2));
+        return register(id, createTaterBlockSettings(), settings -> new BotanicalCollectableBlock(settings, textureUp, textureDown, effect, 2));
     }
 
     private static Block registerTaterBlock(String id, ParticleEffect effect, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new CubicPotatoBlock(settings, effect, texture));
+        return register(id, createTaterBlockSettings(), settings -> new CubicCollectableBlock(settings, effect, texture));
     }
 
     private static Block registerTaterBlock(String id, Block particleBlock, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new CubicPotatoBlock(settings, particleBlock, texture));
+        return register(id, createTaterBlockSettings(), settings -> new CubicCollectableBlock(settings, particleBlock, texture));
     }
 
     private static Block registerTaterBlock(String id, Item particleItem, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new CubicPotatoBlock(settings, particleItem, texture));
+        return register(id, createTaterBlockSettings(), settings -> new CubicCollectableBlock(settings, particleItem, texture));
     }
 
     private static Block registerTaterBlock(String id, ParticleEffect effect, String texture, int particleRate) {
-        return register(id, createTaterBlockSettings(), settings -> new CubicPotatoBlock(settings, effect, texture, particleRate));
+        return register(id, createTaterBlockSettings(), settings -> new CubicCollectableBlock(settings, effect, texture, particleRate));
     }
   
     private static Block registerColorPatternTaterBlock(String id, int[] pattern, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new ColorPatternTaterBlock(settings, pattern, texture));
+        return register(id, createTaterBlockSettings(), settings -> new ColorPatternCollectableBlock(settings, pattern, texture));
     }
 
     private static Block registerEntityEffectTaterBlock(String id, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new EntityEffectTaterBlock(settings, texture));
+        return register(id, createTaterBlockSettings(), settings -> new EntityEffectCollectableBlock(settings, texture));
     }
 
     private static Block registerLuckyTaterBlock(String id, String texture, String cooldownTexture) {
-        return register(id, createTaterBlockSettings(), settings -> new LuckyTaterBlock(settings, texture, cooldownTexture));
+        return register(id, createTaterBlockSettings(), settings -> new LuckyCollectableBlock(settings, texture, cooldownTexture));
     }
 
     private static Block registerWardenTaterBlock(String id, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new WardenTaterBlock(settings, texture));
+        return register(id, createTaterBlockSettings(), settings -> new WardenCollectableBlock(settings, texture));
     }
 
-    private static Block registerGlowingLayerTaterBlock(String id, ParticleEffect effect, String texture, GlowingLayerTaterBlock.Pixel[] glowingPixels) {
-        return register(id, createTaterBlockSettings(), settings -> new GlowingLayerTaterBlock(settings, effect, texture, glowingPixels));
+    private static Block registerGlowingLayerTaterBlock(String id, ParticleEffect effect, String texture, GlowingLayerCollectableBlock.Pixel[] glowingPixels) {
+        return register(id, createTaterBlockSettings(), settings -> new GlowingLayerCollectableBlock(settings, effect, texture, glowingPixels));
     }
 
     private static Block registerDiceTaterBlock(String id) {
-        return register(id, createTaterBlockSettings(), settings -> new DiceTaterBlock(settings));
+        return register(id, createTaterBlockSettings(), settings -> new DiceCollectableBlock(settings));
     }
 
     private static Block registerTateroidBlock(String id, RegistryEntry<SoundEvent> defaultSound, double particleColor, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new TateroidBlock(settings, defaultSound, particleColor, texture));
+        return register(id, createTaterBlockSettings(), settings -> new NoteCollectableBlock(settings, defaultSound, particleColor, texture));
     }
 
     private static Block registerColorTaterBlock(String id, DyeColor color, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new ColorTaterBlock(settings, color, texture));
+        return register(id, createTaterBlockSettings(), settings -> new ColorCollectableBlock(settings, color, texture));
     }
 
     private static Block registerRedstoneTaterBlock(String id, ParticleEffect effect, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new RedstoneTaterBlock(settings, effect, texture));
+        return register(id, createTaterBlockSettings(), settings -> new RedstoneCollectableBlock(settings, effect, texture));
     }
 
     private static Block registerDaylightDetectorTaterBlock(String id, String texture, boolean inverted) {
-        return register(id, createTaterBlockSettings(), settings -> new DaylightDetectorTaterBlock(settings, texture, inverted));
+        return register(id, createTaterBlockSettings(), settings -> new DaylightDetectorCollectableBlock(settings, texture, inverted));
     }
 
     private static Block registerTargetTaterBlock(String id, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new TargetTaterBlock(settings, texture));
+        return register(id, createTaterBlockSettings(), settings -> new TargetCollectableBlock(settings, texture));
     }
 
     private static Block registerBellTaterBlock(String id, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new BellTaterBlock(settings, texture));
+        return register(id, createTaterBlockSettings(), settings -> new BellCollectableBlock(settings, texture));
     }
 
     private static Block registerElderGuardianParticleTaterBlock(String id, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new ElderGuardianParticleTater(settings, texture));
+        return register(id, createTaterBlockSettings(), settings -> new ElderGuardianParticleCollectable(settings, texture));
     }
 
     private static Block registerCapsuleTaterBlock(String id, int color, int weight, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new CapsuleTaterBlock(settings, color, weight, texture));
+        return register(id, createTaterBlockSettings(), settings -> new CapsuleCollectableBlock(settings, color, weight, texture));
     }
 
     private static Block registerMarkerTaterBlock(String id, Block particleBlock, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new MarkerTaterBlock(settings, particleBlock, texture));
+        return register(id, createTaterBlockSettings(), settings -> new MarkerCollectableBlock(settings, particleBlock, texture));
     }
 
     private static Block registerLightTaterBlock(String id, String texture) {
-        return register(id, createTaterBlockSettings(), settings -> new LightTaterBlock(settings, texture));
+        return register(id, createTaterBlockSettings(), settings -> new LightCollectableBlock(settings, texture));
     }
 
     public static void register() {

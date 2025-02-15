@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -9,12 +9,12 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 
-public class MarkerTaterBlock extends CubicPotatoBlock {
-    public MarkerTaterBlock(Settings settings, BlockState particleState, String texture) {
+public class MarkerCollectableBlock extends CubicCollectableBlock {
+    public MarkerCollectableBlock(Settings settings, BlockState particleState, String texture) {
         super(settings, new BlockStateParticleEffect(ParticleTypes.BLOCK_MARKER, particleState), texture, 12);
     }
 
-    public MarkerTaterBlock(Settings settings, Block particleBlock, String texture) {
+    public MarkerCollectableBlock(Settings settings, Block particleBlock, String texture) {
         this(settings, particleBlock.getDefaultState(), texture);
     }
 

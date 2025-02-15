@@ -12,7 +12,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import xyz.nucleoid.extras.lobby.PlayerLobbyState;
-import xyz.nucleoid.extras.lobby.block.tater.TinyPotatoBlock;
+import xyz.nucleoid.extras.lobby.block.collectable.TinyPotatoBlock;
 import xyz.nucleoid.extras.util.PagedGui;
 
 import java.util.List;

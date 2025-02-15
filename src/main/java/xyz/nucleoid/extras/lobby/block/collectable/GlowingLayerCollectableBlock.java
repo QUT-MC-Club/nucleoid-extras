@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import eu.pb4.polymer.virtualentity.api.BlockWithElementHolder;
 import eu.pb4.polymer.virtualentity.api.ElementHolder;
@@ -14,10 +14,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import org.joml.Matrix4f;
 
-public class GlowingLayerTaterBlock extends CubicPotatoBlock implements BlockWithElementHolder {
+public class GlowingLayerCollectableBlock extends CubicCollectableBlock implements BlockWithElementHolder {
     private final Pixel[] glowingPixels;
 
-    public GlowingLayerTaterBlock(Settings settings, ParticleEffect particleEffect, String texture, Pixel[] glowingPixels) {
+    public GlowingLayerCollectableBlock(Settings settings, ParticleEffect particleEffect, String texture, Pixel[] glowingPixels) {
         super(settings, particleEffect, texture, 1);
         this.glowingPixels = glowingPixels;
     }

@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.particle.ParticleEffect;
@@ -6,7 +6,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 
-public class CapsuleTaterBlock extends ColorTaterBlock implements LuckyTaterDrop {
+public class CapsuleCollectableBlock extends ColorCollectableBlock implements LuckyCollectableDrop {
     private static final int PARTICLE_COUNT = 8;
 
     private static final double BLOCK_PARTICLE_RADIUS = 0.8;
@@ -14,7 +14,7 @@ public class CapsuleTaterBlock extends ColorTaterBlock implements LuckyTaterDrop
 
     private final int weight;
 
-    public CapsuleTaterBlock(AbstractBlock.Settings settings, int color, int weight, String texture) {
+    public CapsuleCollectableBlock(AbstractBlock.Settings settings, int color, int weight, String texture) {
         super(settings, color, texture);
 
         this.weight = weight;

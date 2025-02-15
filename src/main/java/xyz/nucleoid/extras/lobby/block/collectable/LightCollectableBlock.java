@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -12,8 +12,8 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 
-public class LightTaterBlock extends MarkerTaterBlock {
-    public LightTaterBlock(Settings settings, String texture) {
+public class LightCollectableBlock extends MarkerCollectableBlock {
+    public LightCollectableBlock(Settings settings, String texture) {
         super(settings, Blocks.LIGHT, texture);
     }
 

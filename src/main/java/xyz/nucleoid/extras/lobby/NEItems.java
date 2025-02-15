@@ -9,7 +9,6 @@ import net.fabricmc.fabric.api.networking.v1.PacketSender;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.minecraft.block.Block;
 import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.EquippableComponent;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
@@ -41,7 +40,7 @@ import xyz.nucleoid.extras.component.LauncherComponent;
 import xyz.nucleoid.extras.component.NEDataComponentTypes;
 import xyz.nucleoid.extras.component.TaterPositionsComponent;
 import xyz.nucleoid.extras.component.TaterSelectionComponent;
-import xyz.nucleoid.extras.lobby.block.tater.TinyPotatoBlock;
+import xyz.nucleoid.extras.lobby.block.collectable.TinyPotatoBlock;
 import xyz.nucleoid.extras.lobby.item.GamePortalOpenerItem;
 import xyz.nucleoid.extras.lobby.item.LaunchFeatherItem;
 import xyz.nucleoid.extras.lobby.item.LobbyBlockItem;
@@ -66,7 +65,7 @@ public class NEItems {
 
     public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
         .displayName(Text.translatable("text.nucleoid_extras.name"))
-        .icon(() -> new ItemStack(NEItems.NUCLEOID_LOGO))
+        .icon(() -> new ItemStack(NEItems.QUTMC_LOGO))
         .entries((context, entries) -> {
             entries.add(NEItems.QUICK_ARMOR_STAND);
             entries.add(NEItems.END_PORTAL);
@@ -126,7 +125,7 @@ public class NEItems {
         })
         .build();
 
-    public static final Item NUCLEOID_LOGO = registerHead("nucleoid_logo", NEBlocks.NUCLEOID_LOGO);
+    public static final Item QUTMC_LOGO = registerHead("nucleoid_logo", NEBlocks.QUTMC_LOGO);
     public static final Item NUCLE_PAST_LOGO = registerHead("nucle_past_logo", NEBlocks.NUCLE_PAST_LOGO);
 
     public static final Item END_PORTAL = registerSimple("end_portal", NEBlocks.END_PORTAL, Items.BLACK_CARPET);

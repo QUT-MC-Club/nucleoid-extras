@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import net.minecraft.SharedConstants;
 import net.minecraft.block.Block;
@@ -26,25 +26,25 @@ import xyz.nucleoid.extras.tag.NEBlockTags;
 import xyz.nucleoid.extras.util.SkinEncoder;
 import xyz.nucleoid.packettweaker.PacketContext;
 
-public class LuckyTaterBlock extends CubicPotatoBlock {
-    private static final EnumProperty<LuckyTaterPhase> PHASE = EnumProperty.of("phase", LuckyTaterPhase.class);
+public class LuckyCollectableBlock extends CubicCollectableBlock {
+    private static final EnumProperty<LuckyCollectablePhase> PHASE = EnumProperty.of("phase", LuckyCollectablePhase.class);
 
     private static final int COURAGE_TICKS = 5;
     private static final int COOLDOWN_TICKS = SharedConstants.TICKS_PER_MINUTE * 30;
 
     private final String cooldownTexture;
 
-    public LuckyTaterBlock(Settings settings, String texture, String cooldownTexture) {
+    public LuckyCollectableBlock(Settings settings, String texture, String cooldownTexture) {
         super(settings, (ParticleEffect) null, texture);
         this.cooldownTexture = SkinEncoder.encode(cooldownTexture);
 
-        this.setDefaultState(this.stateManager.getDefaultState().with(PHASE, LuckyTaterPhase.READY));
+        this.setDefaultState(this.stateManager.getDefaultState().with(PHASE, LuckyCollectablePhase.READY));
     }
 
     @Override
     public ParticleEffect getPlayerParticleEffect(ServerPlayerEntity player) {
-        int fromColor = LuckyTaterBlock.getRandomColor(player.getRandom());
-        int toColor = LuckyTaterBlock.getRandomColor(player.getRandom());
+        int fromColor = LuckyCollectableBlock.getRandomColor(player.getRandom());
+        int toColor = LuckyCollectableBlock.getRandomColor(player.getRandom());
 
         int scale = player.getRandom().nextInt(3);
         return new DustColorTransitionParticleEffect(fromColor, toColor, scale);
@@ -52,22 +52,22 @@ public class LuckyTaterBlock extends CubicPotatoBlock {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        LuckyTaterPhase phase = state.get(PHASE);
+        LuckyCollectablePhase phase = state.get(PHASE);
 
-        if (phase != LuckyTaterPhase.READY) {
+        if (phase != LuckyCollectablePhase.READY) {
             return ActionResult.FAIL;
         }
 
         if (world instanceof ServerWorld serverWorld) {
-            LuckyTaterDropPos dropPos = this.getDropPos(serverWorld, state, pos);
+            LuckyCollectableDropPos dropPos = this.getDropPos(serverWorld, state, pos);
 
-            if (dropPos instanceof LuckyTaterDropPos.Blocked) {
-                world.setBlockState(pos, state.with(PHASE, LuckyTaterPhase.BUILDING_COURAGE));
+            if (dropPos instanceof LuckyCollectableDropPos.Blocked) {
+                world.setBlockState(pos, state.with(PHASE, LuckyCollectablePhase.BUILDING_COURAGE));
                 world.scheduleBlockTick(pos, this, COURAGE_TICKS);
             } else {
                 Block drop = this.getDrop(serverWorld);
 
-                if (drop instanceof CubicPotatoBlock taterDrop && dropPos instanceof LuckyTaterDropPos.Allowed allowed) {
+                if (drop instanceof CubicCollectableBlock taterDrop && dropPos instanceof LuckyCollectableDropPos.Allowed allowed) {
                     BlockState dropState = drop.getDefaultState();
                     if (dropState.contains(Properties.ROTATION)) {
                         dropState = dropState.with(Properties.ROTATION, state.get(Properties.ROTATION));
@@ -84,7 +84,7 @@ public class LuckyTaterBlock extends CubicPotatoBlock {
                     world.playSound(null, pos, SoundEvents.ENTITY_ITEM_PICKUP, SoundCategory.BLOCKS, 1, pitch);
 
                     // Start cooldown
-                    world.setBlockState(pos, state.with(PHASE, LuckyTaterPhase.COOLDOWN));
+                    world.setBlockState(pos, state.with(PHASE, LuckyCollectablePhase.COOLDOWN));
                     world.scheduleBlockTick(pos, this, COOLDOWN_TICKS);
                 }
             }
@@ -106,7 +106,7 @@ public class LuckyTaterBlock extends CubicPotatoBlock {
 
         for (RegistryEntry<Block> entry : drops.get()) {
             Block block = entry.value();
-            int weight = block instanceof LuckyTaterDrop drop ? drop.getWeight() : 1;
+            int weight = block instanceof LuckyCollectableDrop drop ? drop.getWeight() : 1;
 
             builder.add(block, weight);
         }
@@ -117,7 +117,7 @@ public class LuckyTaterBlock extends CubicPotatoBlock {
             .orElse(null);
     }
 
-    private LuckyTaterDropPos getDropPos(ServerWorld world, BlockState state, BlockPos pos) {
+    private LuckyCollectableDropPos getDropPos(ServerWorld world, BlockState state, BlockPos pos) {
         BlockPos.Mutable dropPos = pos.mutableCopy();
         dropPos.move(Direction.DOWN);
 
@@ -126,32 +126,32 @@ public class LuckyTaterBlock extends CubicPotatoBlock {
 
         for (int i = 0; i < 3; i++) {
             BlockState dropState = world.getBlockState(dropPos);
-            if (dropState.getBlock() instanceof CubicPotatoBlock) {
-                return new LuckyTaterDropPos.Blocked(dropPos);
+            if (dropState.getBlock() instanceof CubicCollectableBlock) {
+                return new LuckyCollectableDropPos.Blocked(dropPos);
             } else if (dropState.isAir()) {
-                return new LuckyTaterDropPos.Allowed(dropPos);
+                return new LuckyCollectableDropPos.Allowed(dropPos);
             }
 
             dropPos.move(Direction.UP);
         }
 
-        return LuckyTaterDropPos.None.INSTANCE;
+        return LuckyCollectableDropPos.None.INSTANCE;
     }
 
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        LuckyTaterPhase phase = state.get(PHASE);
+        LuckyCollectablePhase phase = state.get(PHASE);
 
-        if (phase == LuckyTaterPhase.BUILDING_COURAGE || phase == LuckyTaterPhase.COOLDOWN) {
-            if (phase == LuckyTaterPhase.BUILDING_COURAGE) {
-                LuckyTaterDropPos dropPos = this.getDropPos(world, state, pos);
+        if (phase == LuckyCollectablePhase.BUILDING_COURAGE || phase == LuckyCollectablePhase.COOLDOWN) {
+            if (phase == LuckyCollectablePhase.BUILDING_COURAGE) {
+                LuckyCollectableDropPos dropPos = this.getDropPos(world, state, pos);
 
-                if (dropPos instanceof LuckyTaterDropPos.Blocked blocked) {
+                if (dropPos instanceof LuckyCollectableDropPos.Blocked blocked) {
                     world.breakBlock(blocked.pos(), false);
                 }
             }
 
-            world.setBlockState(pos, state.with(PHASE, LuckyTaterPhase.READY));
+            world.setBlockState(pos, state.with(PHASE, LuckyCollectablePhase.READY));
         }
     }
 
@@ -173,7 +173,7 @@ public class LuckyTaterBlock extends CubicPotatoBlock {
 
     @Override
     public String getPolymerSkinValue(BlockState state, BlockPos pos, PacketContext context) {
-        return state.get(PHASE) == LuckyTaterPhase.COOLDOWN ? this.cooldownTexture : super.getPolymerSkinValue(state, pos, context);
+        return state.get(PHASE) == LuckyCollectablePhase.COOLDOWN ? this.cooldownTexture : super.getPolymerSkinValue(state, pos, context);
     }
 
     private static int getRandomColor(Random random) {

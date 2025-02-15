@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import net.minecraft.SharedConstants;
 import net.minecraft.block.Block;
@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import xyz.nucleoid.extras.lobby.NEBlocks;
 
-public class TateroidBlockEntity extends BlockEntity {
+public class NoteCollectableBlockEntity extends BlockEntity {
     private static final String DURATION_KEY = "Duration";
     private static final String TEMPO_KEY = "Tempo";
     private static final String PITCH_KEY = "Pitch";
@@ -30,7 +30,7 @@ public class TateroidBlockEntity extends BlockEntity {
     @Nullable
     private RegistryEntry<SoundEvent> sound;
 
-    public TateroidBlockEntity(BlockPos pos, BlockState state) {
+    public NoteCollectableBlockEntity(BlockPos pos, BlockState state) {
         super(NEBlocks.TATEROID_ENTITY, pos, state);
     }
 
@@ -59,8 +59,8 @@ public class TateroidBlockEntity extends BlockEntity {
         }
 
         Block block = this.getCachedState().getBlock();
-        if (block instanceof TateroidBlock) {
-            return ((TateroidBlock) block).getDefaultSound();
+        if (block instanceof NoteCollectableBlock) {
+            return ((NoteCollectableBlock) block).getDefaultSound();
         }
 
         return null;
@@ -118,7 +118,7 @@ public class TateroidBlockEntity extends BlockEntity {
             .ifPresent(entry -> this.sound = entry);
     }
 
-    protected static void serverTick(World world, BlockPos pos, BlockState state, TateroidBlockEntity blockEntity) {
+    protected static void serverTick(World world, BlockPos pos, BlockState state, NoteCollectableBlockEntity blockEntity) {
         blockEntity.playSound(world.getTime());
     }
 }

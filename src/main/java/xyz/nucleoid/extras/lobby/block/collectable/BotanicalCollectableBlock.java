@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import eu.pb4.polymer.core.api.utils.PolymerUtils;
 import eu.pb4.polymer.virtualentity.api.BlockWithElementHolder;
@@ -29,11 +29,11 @@ import org.joml.Vector3f;
 import xyz.nucleoid.extras.util.SkinEncoder;
 import xyz.nucleoid.packettweaker.PacketContext;
 
-public class BotanicalPotatoBlock extends TinyPotatoBlock implements BlockWithElementHolder {
+public class BotanicalCollectableBlock extends TinyPotatoBlock implements BlockWithElementHolder {
     private final ItemStack upStack;
     private final ItemStack downStack;
 
-    public BotanicalPotatoBlock(Settings settings, String upperTexture, String lowerTexture, ParticleEffect particleEffect, int particleRate) {
+    public BotanicalCollectableBlock(Settings settings, String upperTexture, String lowerTexture, ParticleEffect particleEffect, int particleRate) {
         super(settings.nonOpaque(), upperTexture, particleEffect, particleRate);
         this.upStack = PolymerUtils.createPlayerHead(this.getItemTexture());
         this.downStack = PolymerUtils.createPlayerHead(SkinEncoder.encode(lowerTexture));
@@ -84,8 +84,8 @@ public class BotanicalPotatoBlock extends TinyPotatoBlock implements BlockWithEl
         private final Matrix4f mat = new Matrix4f();
 
         Model(BlockState state) {
-            this.upPart = new ItemDisplayElement(BotanicalPotatoBlock.this.upStack);
-            this.downPart = new ItemDisplayElement(BotanicalPotatoBlock.this.downStack);
+            this.upPart = new ItemDisplayElement(BotanicalCollectableBlock.this.upStack);
+            this.downPart = new ItemDisplayElement(BotanicalCollectableBlock.this.downStack);
 
             this.upPart.setModelTransformation(ModelTransformationMode.FIXED);
             this.downPart.setModelTransformation(ModelTransformationMode.FIXED);

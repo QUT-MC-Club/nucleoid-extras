@@ -31,9 +31,9 @@ import xyz.nucleoid.extras.component.NEDataComponentTypes;
 import xyz.nucleoid.extras.component.TaterSelectionComponent;
 import xyz.nucleoid.extras.lobby.NEItems;
 import xyz.nucleoid.extras.lobby.PlayerLobbyState;
-import xyz.nucleoid.extras.lobby.block.tater.CorruptaterBlock;
-import xyz.nucleoid.extras.lobby.block.tater.CubicPotatoBlock;
-import xyz.nucleoid.extras.lobby.block.tater.TinyPotatoBlock;
+import xyz.nucleoid.extras.lobby.block.collectable.CorruptCollectableBlock;
+import xyz.nucleoid.extras.lobby.block.collectable.CubicCollectableBlock;
+import xyz.nucleoid.extras.lobby.block.collectable.TinyPotatoBlock;
 import xyz.nucleoid.extras.lobby.gui.TaterBoxGui;
 import xyz.nucleoid.packettweaker.PacketContext;
 import xyz.nucleoid.server.translations.api.Localization;
@@ -226,7 +226,7 @@ public class TaterBoxItem extends Item implements PolymerItem {
         tooltip.add(Text.translatable("text.nucleoid_extras.tater_box.selected", selectedName).formatted(Formatting.GRAY));
 
         int count = owner != null && owner.getPlayer() != null ? PlayerLobbyState.get(owner.getPlayer()).collectedTaters.size() : 0;
-        int max = CubicPotatoBlock.TATERS.size();
+        int max = CubicCollectableBlock.TATERS.size();
         String percent = String.format("%.2f", count / (double) max * 100);
 
         tooltip.add(Text.translatable("text.nucleoid_extras.tater_box.completion", count, max, percent).formatted(Formatting.GRAY));
@@ -235,7 +235,7 @@ public class TaterBoxItem extends Item implements PolymerItem {
     public static Stream<TinyPotatoBlock> getSortedTaterStream(ServerPlayerEntity player) {
         return TinyPotatoBlock.TATERS.stream()
             .sorted(Comparator.comparing(tater -> {
-                if (!(tater instanceof CorruptaterBlock)) {
+                if (!(tater instanceof CorruptCollectableBlock)) {
                     var name = tater.getName();
 
                     if (name != null) {

@@ -4,7 +4,7 @@ import com.mojang.datafixers.util.Either;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import net.minecraft.util.dynamic.Codecs;
-import xyz.nucleoid.extras.lobby.block.tater.TinyPotatoBlock;
+import xyz.nucleoid.extras.lobby.block.collectable.TinyPotatoBlock;
 
 import java.util.function.Function;
 

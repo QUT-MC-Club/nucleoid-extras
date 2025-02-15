@@ -30,7 +30,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import xyz.nucleoid.extras.component.NEDataComponentTypes;
 import xyz.nucleoid.extras.component.TaterPositionsComponent;
-import xyz.nucleoid.extras.lobby.block.tater.TinyPotatoBlock;
+import xyz.nucleoid.extras.lobby.block.collectable.TinyPotatoBlock;
 import xyz.nucleoid.extras.mixin.lobby.ServerChunkLoadingManagerAccessor;
 import xyz.nucleoid.packettweaker.PacketContext;
 

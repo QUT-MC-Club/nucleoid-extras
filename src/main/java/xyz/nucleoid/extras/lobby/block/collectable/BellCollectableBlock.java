@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import org.jetbrains.annotations.Nullable;
 import xyz.nucleoid.extras.lobby.NEBlocks;
@@ -28,10 +28,10 @@ import net.minecraft.world.World;
 import net.minecraft.world.block.WireOrientation;
 import net.minecraft.world.event.GameEvent;
 
-public class BellTaterBlock extends CubicPotatoBlock implements BlockEntityProvider {
+public class BellCollectableBlock extends CubicCollectableBlock implements BlockEntityProvider {
 	public static final BooleanProperty POWERED = Properties.POWERED;
 
-	public BellTaterBlock(Settings settings, String texture) {
+	public BellCollectableBlock(Settings settings, String texture) {
 		super(settings, ParticleTypes.NOTE, texture);
 		this.setDefaultState(this.stateManager.getDefaultState().with(POWERED, false));
 	}
@@ -76,7 +76,7 @@ public class BellTaterBlock extends CubicPotatoBlock implements BlockEntityProvi
 
 	public boolean ring(@Nullable Entity entity, World world, BlockPos pos, @Nullable Direction direction) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		if (!world.isClient && blockEntity instanceof BellTaterBlockEntity bellTaterBlockEntity) {
+		if (!world.isClient && blockEntity instanceof BellCollectableBlockEntity bellTaterBlockEntity) {
 			if (direction == null) {
 				int rotation = world.getBlockState(pos).get(Properties.ROTATION);
 				direction = Direction.fromHorizontalDegrees(rotation * 22.5);
@@ -98,12 +98,12 @@ public class BellTaterBlock extends CubicPotatoBlock implements BlockEntityProvi
 	@Override
 	@Nullable
 	public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-		return new BellTaterBlockEntity(pos, state);
+		return new BellCollectableBlockEntity(pos, state);
 	}
 
 	@Override
 	@Nullable
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-		return BlockWithEntityAccessor.validateTicker(type, NEBlocks.BELL_TATER_ENTITY, world.isClient ? BellTaterBlockEntity::clientTick : BellTaterBlockEntity::serverTick);
+		return BlockWithEntityAccessor.validateTicker(type, NEBlocks.BELL_TATER_ENTITY, world.isClient ? BellCollectableBlockEntity::clientTick : BellCollectableBlockEntity::serverTick);
 	}
 }

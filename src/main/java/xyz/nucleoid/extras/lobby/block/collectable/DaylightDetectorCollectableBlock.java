@@ -1,4 +1,4 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import org.jetbrains.annotations.Nullable;
 import xyz.nucleoid.extras.lobby.NEBlocks;
@@ -21,12 +21,12 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.LightType;
 import net.minecraft.world.World;
 
-public class DaylightDetectorTaterBlock extends CubicPotatoBlock implements BlockEntityProvider {
+public class DaylightDetectorCollectableBlock extends CubicCollectableBlock implements BlockEntityProvider {
 	public static final IntProperty POWER = Properties.POWER;
 
 	public final boolean inverted;
 
-	public DaylightDetectorTaterBlock(Settings settings, String texture, boolean inverted) {
+	public DaylightDetectorCollectableBlock(Settings settings, String texture, boolean inverted) {
 		super(settings, Blocks.DAYLIGHT_DETECTOR.getDefaultState().with(Properties.INVERTED, inverted), texture);
 		this.inverted = inverted;
 		this.setDefaultState(this.stateManager.getDefaultState().with(POWER, 0));
@@ -45,7 +45,7 @@ public class DaylightDetectorTaterBlock extends CubicPotatoBlock implements Bloc
 	private static void updateState(BlockState state, World world, BlockPos pos) {
 		int power = world.getLightLevel(LightType.SKY, pos) - world.getAmbientDarkness();
 		float skyAngle = world.getSkyAngleRadians(1.0f);
-		boolean inverted = ((DaylightDetectorTaterBlock) state.getBlock()).inverted;
+		boolean inverted = ((DaylightDetectorCollectableBlock) state.getBlock()).inverted;
 		if (inverted) {
 			power = 15 - power;
 		} else if (power > 0) {
@@ -61,21 +61,21 @@ public class DaylightDetectorTaterBlock extends CubicPotatoBlock implements Bloc
 
 	@Override
 	public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-		return new DaylightDetectorTaterBlockEntity(pos, state);
+		return new DaylightDetectorCollectableBlockEntity(pos, state);
 	}
 
 	@Override
 	@Nullable
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
 		if (!world.isClient && world.getDimension().hasSkyLight()) {
-			return BlockWithEntityAccessor.validateTicker(type, NEBlocks.DAYLIGHT_DETECTOR_TATER_ENTITY, DaylightDetectorTaterBlock::tick);
+			return BlockWithEntityAccessor.validateTicker(type, NEBlocks.DAYLIGHT_DETECTOR_TATER_ENTITY, DaylightDetectorCollectableBlock::tick);
 		}
 		return null;
 	}
 
 	private static <T extends BlockEntity> void tick(World world, BlockPos pos, BlockState state, T blockEntity) {
 		if (world.getTime() % 20L == 0L) {
-			DaylightDetectorTaterBlock.updateState(state, world, pos);
+			DaylightDetectorCollectableBlock.updateState(state, world, pos);
 		}
 	}
 

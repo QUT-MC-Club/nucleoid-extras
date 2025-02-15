@@ -1,14 +1,14 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import net.minecraft.particle.EntityEffectParticleEffect;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.random.Random;
 
-public class EntityEffectTaterBlock extends CubicPotatoBlock {
+public class EntityEffectCollectableBlock extends CubicCollectableBlock {
     private final Random random = Random.createLocal();
 
-    public EntityEffectTaterBlock(Settings settings, String texture) {
+    public EntityEffectCollectableBlock(Settings settings, String texture) {
         super(settings, (ParticleEffect) null, texture);
     }
 

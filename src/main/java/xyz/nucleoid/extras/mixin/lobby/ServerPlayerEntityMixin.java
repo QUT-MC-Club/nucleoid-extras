@@ -15,7 +15,7 @@ import xyz.nucleoid.extras.component.NEDataComponentTypes;
 import xyz.nucleoid.extras.component.TaterSelectionComponent;
 import xyz.nucleoid.extras.lobby.NECriteria;
 import xyz.nucleoid.extras.lobby.PlayerLobbyState;
-import xyz.nucleoid.extras.lobby.block.tater.CubicPotatoBlock;
+import xyz.nucleoid.extras.lobby.block.collectable.CubicCollectableBlock;
 
 @Mixin(ServerPlayerEntity.class)
 public abstract class ServerPlayerEntityMixin extends PlayerEntity {
@@ -29,7 +29,7 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntity {
         TaterSelectionComponent taterSelection = helmet.getOrDefault(NEDataComponentTypes.TATER_SELECTION, TaterSelectionComponent.DEFAULT);
 
         taterSelection.tater().ifPresent(tater -> {
-            if (tater.value() instanceof CubicPotatoBlock tinyPotatoBlock) {
+            if (tater.value() instanceof CubicCollectableBlock tinyPotatoBlock) {
                 ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
                 PlayerLobbyState state = PlayerLobbyState.get(player);
 

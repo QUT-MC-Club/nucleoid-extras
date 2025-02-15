@@ -1,8 +1,8 @@
-package xyz.nucleoid.extras.lobby.block.tater;
+package xyz.nucleoid.extras.lobby.block.collectable;
 
 import net.minecraft.util.StringIdentifiable;
 
-public enum LuckyTaterPhase implements StringIdentifiable {
+public enum LuckyCollectablePhase implements StringIdentifiable {
     READY("ready", 0),
     BUILDING_COURAGE("building_courage", 1),
     COOLDOWN("cooldown", 15),
@@ -11,7 +11,7 @@ public enum LuckyTaterPhase implements StringIdentifiable {
     private final String name;
     private final int comparatorOutput;
 
-    private LuckyTaterPhase(String name, int comparatorOutput) {
+    private LuckyCollectablePhase(String name, int comparatorOutput) {
         this.name = name;
         this.comparatorOutput = comparatorOutput;
     }

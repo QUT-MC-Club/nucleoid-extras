@@ -7,7 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.predicate.entity.LootContextPredicate;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.network.ServerPlayerEntity;
-import xyz.nucleoid.extras.lobby.block.tater.TinyPotatoBlock;
+import xyz.nucleoid.extras.lobby.block.collectable.TinyPotatoBlock;
 
 import java.util.Calendar;
 import java.util.Date;
