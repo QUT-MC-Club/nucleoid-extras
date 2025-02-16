@@ -81,6 +81,8 @@ public class NEItems {
             entries.add(NEItems.INFINITE_DROPPER);
             entries.add(NEItems.SNAKE_BLOCK);
             entries.add(NEItems.FAST_SNAKE_BLOCK);
+            entries.add(NEItems.POWERED_SNAKE_BLOCK);
+            entries.add(NEItems.POWERED_FAST_SNAKE_BLOCK);
             entries.add(NEItems.TRANSIENT_IRON_DOOR);
             entries.add(NEItems.TRANSIENT_OAK_DOOR);
             entries.add(NEItems.TRANSIENT_SPRUCE_DOOR);
@@ -142,6 +144,8 @@ public class NEItems {
     public static final Item INFINITE_DROPPER = registerSimple("infinite_dropper", NEBlocks.INFINITE_DROPPER, Items.DROPPER);
     public static final Item SNAKE_BLOCK = registerSimple("snake_block", NEBlocks.SNAKE_BLOCK, Items.LIME_CONCRETE);
     public static final Item FAST_SNAKE_BLOCK = registerSimple("fast_snake_block", NEBlocks.FAST_SNAKE_BLOCK, Items.LIGHT_BLUE_CONCRETE);
+    public static final Item POWERED_SNAKE_BLOCK = registerSimple("powered_snake_block", NEBlocks.POWERED_SNAKE_BLOCK, Items.REDSTONE_BLOCK);
+    public static final Item POWERED_FAST_SNAKE_BLOCK = registerSimple("powered_fast_snake_block", NEBlocks.POWERED_FAST_SNAKE_BLOCK, Items.REDSTONE_BLOCK);
 
     public static final Item TRANSIENT_IRON_DOOR = register("transient_iron_door", new Item.Settings().useBlockPrefixedTranslationKey(), settings -> new LobbyTallBlockItem(NEBlocks.TRANSIENT_IRON_DOOR, settings, Items.IRON_DOOR));
     public static final Item TRANSIENT_OAK_DOOR = register("transient_oak_door", new Item.Settings().useBlockPrefixedTranslationKey(), settings -> new LobbyTallBlockItem(NEBlocks.TRANSIENT_OAK_DOOR, settings, Items.OAK_DOOR));
@@ -480,35 +484,35 @@ public class NEItems {
     public static final Item CORRUPTATER = registerHead("corruptater", NEBlocks.CORRUPTATER);
 
     public static final Item TATER_BOX = register("tater_box", new Item.Settings()
-            .component(NEDataComponentTypes.TATER_SELECTION, TaterSelectionComponent.DEFAULT)
-            .maxCount(1), settings -> new TaterBoxItem(settings));
+        .component(NEDataComponentTypes.TATER_SELECTION, TaterSelectionComponent.DEFAULT)
+        .maxCount(1), settings -> new TaterBoxItem(settings));
     public static final Item CREATIVE_TATER_BOX = register("creative_tater_box", new Item.Settings()
-            .component(NEDataComponentTypes.TATER_SELECTION, TaterSelectionComponent.DEFAULT)
-            .maxCount(1), settings -> new CreativeTaterBoxItem(settings));
+        .component(NEDataComponentTypes.TATER_SELECTION, TaterSelectionComponent.DEFAULT)
+        .maxCount(1), settings -> new CreativeTaterBoxItem(settings));
 
     public static final Item TATER_GUIDEBOOK = register("tater_guidebook", new Item.Settings()
-            .component(NEDataComponentTypes.TATER_POSITIONS, TaterPositionsComponent.DEFAULT)
-            .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)
-            .maxCount(1), settings -> new TaterGuidebookItem(settings));
+        .component(NEDataComponentTypes.TATER_POSITIONS, TaterPositionsComponent.DEFAULT)
+        .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)
+        .maxCount(1), settings -> new TaterGuidebookItem(settings));
     public static final Item QUICK_ARMOR_STAND = register("quick_armor_stand", new Item.Settings(), settings -> new QuickArmorStandItem(settings));
     public static final Item GAME_PORTAL_OPENER = register("game_portal_opener", new Item.Settings().maxCount(1), settings -> new GamePortalOpenerItem(settings));
     public static final Item LAUNCH_FEATHER = register("launch_feather", new Item.Settings()
-            .component(NEDataComponentTypes.LAUNCHER, LauncherComponent.DEFAULT)
-            .maxCount(1), settings -> new LaunchFeatherItem(settings));
+        .component(NEDataComponentTypes.LAUNCHER, LauncherComponent.DEFAULT)
+        .maxCount(1), settings -> new LaunchFeatherItem(settings));
 
     public static final Item LOCK_SETTER = register("lock_setter", new Item.Settings()
-            .component(DataComponentTypes.LOCK, LockSetterItem.createUnlockableLock())
-            .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)
-            .maxCount(1), LockSetterItem::new);
+        .component(DataComponentTypes.LOCK, LockSetterItem.createUnlockableLock())
+        .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)
+        .maxCount(1), LockSetterItem::new);
 
     public static final Item RULE_BOOK = register("rule_book", new Item.Settings()
-            .rarity(Rarity.EPIC)
-            .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true), settings -> new RuleBookItem(settings));
+        .rarity(Rarity.EPIC)
+        .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true), settings -> new RuleBookItem(settings));
 
     private static Item registerHead(String id, Block head) {
         Item.Settings baseSettings = new Item.Settings()
-                .useBlockPrefixedTranslationKey()
-                .equippableUnswappable(EquipmentSlot.HEAD);
+            .useBlockPrefixedTranslationKey()
+            .equippableUnswappable(EquipmentSlot.HEAD);
 
         if (head instanceof TinyPotatoBlock tinyPotatoBlock) {
             return register(id, baseSettings, settings -> new LobbyHeadItem(head, settings, tinyPotatoBlock.getItemTexture()));

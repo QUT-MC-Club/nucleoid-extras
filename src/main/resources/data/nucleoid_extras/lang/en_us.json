@@ -34,6 +34,8 @@
   "block.nucleoid_extras.infinite_dropper": "Infinite Dropper (Lobby only!)",
   "block.nucleoid_extras.snake_block": "Snake Block (Lobby only!)",
   "block.nucleoid_extras.fast_snake_block": "Fast Snake Block (Lobby only!)",
+  "block.nucleoid_extras.powered_snake_block": "Powered Snake Block (Lobby only!)",
+  "block.nucleoid_extras.powered_fast_snake_block": "Powered Fast Snake Block (Lobby only!)",
 
   "block.nucleoid_extras.transient_iron_door": "Transient Iron Door (Lobby only!)",
   "block.nucleoid_extras.transient_oak_door": "Transient Oak Door (Lobby only!)",
