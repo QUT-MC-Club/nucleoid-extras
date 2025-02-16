@@ -68,10 +68,10 @@ public class NEBlocks {
     public static final Block INFINITE_DISPENSER = register("infinite_dispenser", AbstractBlock.Settings.copy(Blocks.DISPENSER).strength(100), settings -> new InfiniteDispenserBlock(settings));
     public static final Block INFINITE_DROPPER = register("infinite_dropper", AbstractBlock.Settings.copy(Blocks.DROPPER).strength(100), settings -> new InfiniteDropperBlock(settings));
 
-    public static final Block SNAKE_BLOCK = register("snake_block", AbstractBlock.Settings.copy(Blocks.LIME_CONCRETE).strength(100), settings -> new SnakeBlock(settings, Blocks.LIME_CONCRETE.getDefaultState(), 8, 7));
-    public static final Block FAST_SNAKE_BLOCK = register("fast_snake_block", AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_CONCRETE).strength(100), settings -> new SnakeBlock(settings, Blocks.LIGHT_BLUE_CONCRETE.getDefaultState(), 4, 7));
-    public static final Block POWERED_SNAKE_BLOCK = register("powered_snake_block", AbstractBlock.Settings.copy(Blocks.REDSTONE_BLOCK).strength(100), settings -> new SnakeBlock(settings, Blocks.REDSTONE_BLOCK.getDefaultState(), 8, 7));
-    public static final Block POWERED_FAST_SNAKE_BLOCK = register("powered_fast_snake_block", AbstractBlock.Settings.copy(Blocks.REDSTONE_BLOCK).strength(100), settings -> new SnakeBlock(settings, Blocks.REDSTONE_BLOCK.getDefaultState(), 4, 7));
+    public static final Block SNAKE_BLOCK = register("snake_block", AbstractBlock.Settings.copy(Blocks.LIME_CONCRETE).strength(100), settings -> new SnakeBlock(settings, Blocks.LIME_CONCRETE.getDefaultState(), 8, 7, false));
+    public static final Block FAST_SNAKE_BLOCK = register("fast_snake_block", AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_CONCRETE).strength(100), settings -> new SnakeBlock(settings, Blocks.LIGHT_BLUE_CONCRETE.getDefaultState(), 4, 7, false));
+    public static final Block POWERED_SNAKE_BLOCK = register("powered_snake_block", AbstractBlock.Settings.copy(Blocks.REDSTONE_BLOCK).strength(100), settings -> new SnakeBlock(settings, Blocks.REDSTONE_BLOCK.getDefaultState(), 8, 7, true));
+    public static final Block POWERED_FAST_SNAKE_BLOCK = register("powered_fast_snake_block", AbstractBlock.Settings.copy(Blocks.REDSTONE_BLOCK).strength(100), settings -> new SnakeBlock(settings, Blocks.REDSTONE_BLOCK.getDefaultState(), 4, 7, true));
 
     public static final Block TRANSIENT_IRON_DOOR = register("transient_iron_door", AbstractBlock.Settings.copy(Blocks.IRON_DOOR), settings -> new TransientDoorBlock(Blocks.IRON_DOOR, settings));
     public static final Block TRANSIENT_OAK_DOOR = register("transient_oak_door", AbstractBlock.Settings.copy(Blocks.OAK_DOOR), settings -> new TransientDoorBlock(Blocks.OAK_DOOR, settings));
