@@ -163,6 +163,7 @@ public class NEBlocks {
     public static final Block DND_CLUB_DICE = registerDiceTaterBlock("dnd_club_dice");
     public static final Block QAC_CLUB_DUCK = registerTaterBlock("qac_club_duck", ParticleTypes.RAIN, "c1eef1240cdf9bb23bb9b44943c0519dc89bd3e139099a27e4fc0d9e345a76ae");
     public static final Block QUT_FUR_PROTOGEN = registerTaterBlock("qut_fur_protogen", ParticleTypes.ELECTRIC_SPARK, "4a2518738a6a3db2bdf00e761653cee28a4ea8cbd4f698ede7c9052c145787d6");
+    public static final Block RESPAWN_MONKE = registerTaterBlock("respawn_monke", ParticleTypes.POOF, "2f0cde1312c8d23d082f939fc7e83168f24225fb7779468e54f82c44e18eb8f3");
 
     public static final Block CORRUPCOLLECTABLE = register("corrupcollectable", createTaterBlockSettings(), settings -> new CorruptaterBlock(settings));
 

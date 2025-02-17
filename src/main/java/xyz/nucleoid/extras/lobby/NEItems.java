@@ -200,6 +200,7 @@ public class NEItems {
     public static final Item BIOMEDICAL_SOCIETY_VIRUS = registerHead("biomedical_society_virus", NEBlocks.BIOMEDICAL_SOCIETY_VIRUS);
     public static final Item QAC_CLUB_DUCK = registerHead("qac_club_duck", NEBlocks.QAC_CLUB_DUCK);
     public static final Item QUT_FUR_PROTOGEN = registerHead("qut_fur_protogen", NEBlocks.QUT_FUR_PROTOGEN);
+    public static final Item RESPAWN_MONKE = registerHead("respawn_monke", NEBlocks.RESPAWN_MONKE);
 
     public static final Item CORRUPCOLLECTABLE = registerHead("corrupcollectable", NEBlocks.CORRUPCOLLECTABLE);
 
