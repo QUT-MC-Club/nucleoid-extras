@@ -201,6 +201,49 @@ public class NEItems {
     public static final Item QAC_CLUB_DUCK = registerHead("qac_club_duck", NEBlocks.QAC_CLUB_DUCK);
     public static final Item QUT_FUR_PROTOGEN = registerHead("qut_fur_protogen", NEBlocks.QUT_FUR_PROTOGEN);
     public static final Item RESPAWN_MONKE = registerHead("respawn_monke", NEBlocks.RESPAWN_MONKE);
+    public static final Item QUT_DESIGN_CLUB = registerHead("qut_design_club", NEBlocks.QUT_DESIGN_CLUB);
+    public static final Item QUT_LACROSSE_CLUB = registerHead("qut_lacrosse_club", NEBlocks.QUT_LACROSSE_CLUB);
+    public static final Item QUT_ROBOTICS_CLUB = registerHead("qut_robotics_club", NEBlocks.QUT_ROBOTICS_CLUB);
+    public static final Item QUT_WOMEN_IN_MATHS = registerHead("qut_women_in_maths", NEBlocks.QUT_WOMEN_IN_MATHS);
+    public static final Item QUT_CHEMICAL_PROCESS_ENGINEERING_CLUB = registerHead("qut_chemical_process_engineering_club", NEBlocks.QUT_CHEMICAL_PROCESS_ENGINEERING_CLUB);
+    public static final Item NATURAL_RESOURCE_SOCIETY = registerHead("natural_resource_society", NEBlocks.NATURAL_RESOURCE_SOCIETY);
+    public static final Item QUT_ASIAN_POP_SOCIETY = registerHead("qut_asian_pop_society", NEBlocks.QUT_ASIAN_POP_SOCIETY);
+    public static final Item QUT_CYBER_SECURITY_CLUB = registerHead("qut_cyber_security_club", NEBlocks.QUT_CYBER_SECURITY_CLUB);
+    public static final Item QUT_INTERIOR_DESIGN = registerHead("qut_interior_design", NEBlocks.QUT_INTERIOR_DESIGN);
+    public static final Item QUT_MATHEMATICS_SOCIETY = registerHead("qut_mathematics_society", NEBlocks.QUT_MATHEMATICS_SOCIETY);
+    public static final Item QUT_MUSIC_SOCIETY = registerHead("qut_music_society", NEBlocks.QUT_MUSIC_SOCIETY);
+    public static final Item QUT_MUSICAL_THEATRE_SOCIETY = registerHead("qut_musical_theatre_society", NEBlocks.QUT_MUSICAL_THEATRE_SOCIETY);
+    public static final Item QUT_VENA_CAVA = registerHead("qut_vena_cava", NEBlocks.QUT_VENA_CAVA);
+    public static final Item QUT_180_DEGREES_CONSULTING = registerHead("qut_180_degrees_consulting", NEBlocks.QUT_180_DEGREES_CONSULTING);
+    public static final Item QUT_BIOMEDICAL_SCIENCE = registerHead("qut_biomedical_science", NEBlocks.QUT_BIOMEDICAL_SCIENCE);
+    public static final Item QUT_CODE_NETWORK = registerHead("qut_code_network", NEBlocks.QUT_CODE_NETWORK);
+    public static final Item QUT_OPTOMETRY_SOCIETY = registerHead("qut_optometry_society", NEBlocks.QUT_OPTOMETRY_SOCIETY);
+    public static final Item QUT_ACCOUNTANCY_ASSOCIATION = registerHead("qut_accountancy_association", NEBlocks.QUT_ACCOUNTANCY_ASSOCIATION);
+    public static final Item QUT_BADMINTON = registerHead("qut_badminton", NEBlocks.QUT_BADMINTON);
+    public static final Item QUT_BIG_LIFT = registerHead("qut_big_lift", NEBlocks.QUT_BIG_LIFT);
+    public static final Item QUT_BOOKCLUB = registerHead("qut_bookclub", NEBlocks.QUT_BOOKCLUB);
+    public static final Item QUT_BUSINESS_ANALYSIS = registerHead("qut_business_analysis", NEBlocks.QUT_BUSINESS_ANALYSIS);
+    public static final Item QUT_CHEMISTRY_CLUB = registerHead("qut_chemistry_club", NEBlocks.QUT_CHEMISTRY_CLUB);
+    public static final Item QUT_ELECTRICAL_ENGINEERING = registerHead("qut_electrical_engineering", NEBlocks.QUT_ELECTRICAL_ENGINEERING);
+    public static final Item QUT_MEDICAL_ENGINEERS = registerHead("qut_medical_engineers", NEBlocks.QUT_MEDICAL_ENGINEERS);
+    public static final Item QUT_OPERATORS = registerHead("qut_operators", NEBlocks.QUT_OPERATORS);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static final Item CORRUPCOLLECTABLE = registerHead("corrupcollectable", NEBlocks.CORRUPCOLLECTABLE);
 

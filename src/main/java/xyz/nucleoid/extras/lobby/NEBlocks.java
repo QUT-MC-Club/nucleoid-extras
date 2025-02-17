@@ -164,6 +164,49 @@ public class NEBlocks {
     public static final Block QAC_CLUB_DUCK = registerTaterBlock("qac_club_duck", ParticleTypes.RAIN, "c1eef1240cdf9bb23bb9b44943c0519dc89bd3e139099a27e4fc0d9e345a76ae");
     public static final Block QUT_FUR_PROTOGEN = registerTaterBlock("qut_fur_protogen", ParticleTypes.ELECTRIC_SPARK, "4a2518738a6a3db2bdf00e761653cee28a4ea8cbd4f698ede7c9052c145787d6");
     public static final Block RESPAWN_MONKE = registerTaterBlock("respawn_monke", ParticleTypes.POOF, "2f0cde1312c8d23d082f939fc7e83168f24225fb7779468e54f82c44e18eb8f3");
+    public static final Block QUT_DESIGN_CLUB = registerTaterBlock("qut_design_club", ParticleTypes.POOF, "b11fa429fe98dbb113c0e1c3ec2aec3d81d0d445c31a6fc337f2cb791c4799");
+    public static final Block QUT_LACROSSE_CLUB = registerTaterBlock("qut_lacrosse_club", ParticleTypes.POOF, "2a43879e6345620bc6811f7a28f31fbda986d2ab76e423e0a161321efb258b95");
+    public static final Block QUT_ROBOTICS_CLUB = registerTaterBlock("qut_robotics_club", ParticleTypes.POOF, "9da17d5e0c2909eb73f16a2aa3238299cf2930e2dde739cef3099dee9fc193bc");
+    public static final Block QUT_WOMEN_IN_MATHS = registerTaterBlock("qut_women_in_maths", ParticleTypes.POOF, "1ac4d9af1e9edc0fa7a2d783eb00438463a25254357bbf00303044df294902e4");
+    public static final Block QUT_CHEMICAL_PROCESS_ENGINEERING_CLUB = registerTaterBlock("qut_chemical_process_engineering_club", ParticleTypes.POOF, "e18c989034104772edb9ef39f089f005c79cd7f56261a066594e9ab25c8817da");
+    public static final Block NATURAL_RESOURCE_SOCIETY = registerTaterBlock("natural_resource_society", ParticleTypes.POOF, "fb8baca8e54db8bfb534346e83232a7ba220d5d617a250b6ecf7c16ea95b74b9");
+    public static final Block QUT_ASIAN_POP_SOCIETY = registerTaterBlock("qut_asian_pop_society", ParticleTypes.POOF, "cd42fcfdfaecfc48977cd730698936937e25040336d929c6d1feacd6567daa6");
+    public static final Block QUT_CYBER_SECURITY_CLUB = registerTaterBlock("qut_cyber_security_club", ParticleTypes.POOF, "a1b80b11ae1f93be090558400a3c29fea1f3e9e8603f9a1927ba79f260cf9f05");
+    public static final Block QUT_INTERIOR_DESIGN = registerTaterBlock("qut_interior_design", ParticleTypes.POOF, "9d16db3099e816341ba929334843648b37700c31042ee208c2443c240f3c74f");
+    public static final Block QUT_MATHEMATICS_SOCIETY = registerTaterBlock("qut_mathematics_society", ParticleTypes.POOF, "432f44cd99de8e8be26b406e8b72d5bc6854bd0e6476a7f2d8b1408fc105e0dc");
+    public static final Block QUT_MUSIC_SOCIETY = registerTaterBlock("qut_music_society", ParticleTypes.POOF, "481e86289de6dec35d18905ff6cb27db31aef8b131f0ab3a357bdcb274daa9d3");
+    public static final Block QUT_MUSICAL_THEATRE_SOCIETY = registerTaterBlock("qut_musical_theatre_society", ParticleTypes.POOF, "76095f17c16d6471acf79cfdb31ce2dbe1734a0f864e3afec42c18abd8510fc1");
+    public static final Block QUT_VENA_CAVA = registerTaterBlock("qut_vena_cava", ParticleTypes.POOF, "934b6599d044192f5dcdcebdd3334459be36c27f30de4c4e58ea7aa23f41ae88");
+    public static final Block QUT_180_DEGREES_CONSULTING = registerTaterBlock("qut_180_degrees_consulting", ParticleTypes.POOF, "f19315b8f457cc4b5b29e733b42ea9c347c8d2d9c3380176fc5421dcc85b575");
+    public static final Block QUT_BIOMEDICAL_SCIENCE = registerTaterBlock("qut_biomedical_science", ParticleTypes.POOF, "56f9119a1d1fb01bb97db89aeba56ff5ee112079e432a2b50fa3a80a8954db38");
+    public static final Block QUT_CODE_NETWORK = registerTaterBlock("qut_code_network", ParticleTypes.POOF, "6683de926abc7e63c256e3213b14b58d38384315c83d5a9bad13e1d859f09977");
+    public static final Block QUT_OPTOMETRY_SOCIETY = registerTaterBlock("qut_optometry_society", ParticleTypes.POOF, "9e68222509bd3e0fb079fa5f8b816f21222536efd53c30dbba9d2ef46d76a9fc");
+    public static final Block QUT_ACCOUNTANCY_ASSOCIATION = registerTaterBlock("qut_accountancy_association", ParticleTypes.POOF, "80118baf8ae1bac6275d7b719c7cd89c58d702b4fa29d6f8bccdbf0c4d3fb5f6");
+    public static final Block QUT_BADMINTON = registerTaterBlock("qut_badminton", ParticleTypes.POOF, "164628b0612abdf7647e724c0d33dcffc70696fed20459cdf0a504dae944b6b5");
+    public static final Block QUT_BIG_LIFT = registerTaterBlock("qut_big_lift", ParticleTypes.POOF, "b9aa1c59d9b1ffc281d7a6d954d53e10aba331b3b5113f9bb15ffe2c338a4834");
+    public static final Block QUT_BOOKCLUB = registerTaterBlock("qut_bookclub", ParticleTypes.POOF, "70adabfd874d098dceaff97e2371446bfa6fe8a6018a1c07ebe152cb525bc654");
+    public static final Block QUT_BUSINESS_ANALYSIS = registerTaterBlock("qut_business_analysis", ParticleTypes.POOF, "9ffd75ba2cfccce4ca39ad23f5fce3d9f4145eec97bb669ee996f778c9f312a6");
+    public static final Block QUT_CHEMISTRY_CLUB = registerTaterBlock("qut_chemistry_club", ParticleTypes.POOF, "6c5830e0bdc0aa4b6ee77b82939ea5c3b067295aee55bcb2cd8321082402e790");
+    public static final Block QUT_ELECTRICAL_ENGINEERING = registerTaterBlock("qut_electrical_engineering", ParticleTypes.POOF, "5bec20aa92f28ee406c9b8521553eb131d8956d23bbb7779d84a99b0b10110a5");
+    public static final Block QUT_MEDICAL_ENGINEERS = registerTaterBlock("qut_medical_engineers", ParticleTypes.POOF, "c74c1ccb03ef6bebb7dc7292327f7e3e37d9c06f569d527f8ca9c761f1878a4e");
+    public static final Block QUT_OPERATORS = registerTaterBlock("qut_operators", ParticleTypes.POOF, "e9993fc628f34c4dd288905e2f5fa1d42afc23495a36ce027c070bcb5d241044");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static final Block CORRUPCOLLECTABLE = register("corrupcollectable", createTaterBlockSettings(), settings -> new CorruptaterBlock(settings));
 
