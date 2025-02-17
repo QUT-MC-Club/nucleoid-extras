@@ -92,7 +92,7 @@ public class PlayerLobbyState {
             // Update the tooltip of tater boxes in player's inventory
             PolymerUtils.reloadInventory(player);
 
-            player.sendMessage(Text.translatable("text.nucleoid_extras.tater_box.added", block.getName()), true);
+            player.sendMessage(Text.translatable("text.nucleoid_extras.club_collectable_box.added", block.getName()), true);
         }
 
         triggerCollectCriterion(player, tater, this.collectedTaters.size());

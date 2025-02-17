@@ -33,10 +33,10 @@ public class NEBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(NEBlocks.TRANSIENT_WAXED_WEATHERED_COPPER_DOOR)
                 .add(NEBlocks.TRANSIENT_WAXED_OXIDIZED_COPPER_DOOR);
 
-        this.getOrCreateTagBuilder(NEBlockTags.LUCKY_TATER_DROPS)
-                .add(NEBlocks.BRONZE_CAPSULE_TATER)
-                .add(NEBlocks.SILVER_CAPSULE_TATER)
-                .add(NEBlocks.GOLD_CAPSULE_TATER);
+//        this.getOrCreateTagBuilder(NEBlockTags.LUCKY_TATER_DROPS)
+//                .add(NEBlocks.BRONZE_CAPSULE_TATER)
+//                .add(NEBlocks.SILVER_CAPSULE_TATER)
+//                .add(NEBlocks.GOLD_CAPSULE_TATER);
 
         this.getOrCreateTagBuilder(BlockTags.MOB_INTERACTABLE_DOORS)
                 .add(NEBlocks.TRANSIENT_COPPER_DOOR)
@@ -48,9 +48,9 @@ public class NEBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(NEBlocks.TRANSIENT_WAXED_WEATHERED_COPPER_DOOR)
                 .add(NEBlocks.TRANSIENT_WAXED_OXIDIZED_COPPER_DOOR);
 
-        this.getOrCreateTagBuilder(NEBlockTags.NON_VIBRATING_TATERS)
-                .addOptionalTag(BlockTags.DAMPENS_VIBRATIONS)
-                .add(NEBlocks.WARDEN_TATER);
+//        this.getOrCreateTagBuilder(NEBlockTags.NON_VIBRATING_TATERS)
+//                .addOptionalTag(BlockTags.DAMPENS_VIBRATIONS)
+//                .add(NEBlocks.WARDEN_TATER);
 
         this.getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
                 .add(NEBlocks.TRANSIENT_OAK_DOOR)
@@ -67,6 +67,6 @@ public class NEBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(NEBlocks.TRANSIENT_WARPED_DOOR);
 
         this.getOrCreateTagBuilder(NEBlockTags.VIRAL_TATERS)
-                .add(NEBlocks.VIRAL_TATER);
+                .add(NEBlocks.BIOMEDICAL_SOCIETY_VIRUS);
     }
 }
