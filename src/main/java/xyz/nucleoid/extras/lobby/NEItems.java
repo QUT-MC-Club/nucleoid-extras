@@ -215,7 +215,6 @@ public class NEItems {
     public static final Item QUT_MUSICAL_THEATRE_SOCIETY = registerHead("qut_musical_theatre_society", NEBlocks.QUT_MUSICAL_THEATRE_SOCIETY);
     public static final Item QUT_VENA_CAVA = registerHead("qut_vena_cava", NEBlocks.QUT_VENA_CAVA);
     public static final Item QUT_180_DEGREES_CONSULTING = registerHead("qut_180_degrees_consulting", NEBlocks.QUT_180_DEGREES_CONSULTING);
-    public static final Item QUT_BIOMEDICAL_SCIENCE = registerHead("qut_biomedical_science", NEBlocks.QUT_BIOMEDICAL_SCIENCE);
     public static final Item QUT_CODE_NETWORK = registerHead("qut_code_network", NEBlocks.QUT_CODE_NETWORK);
     public static final Item QUT_OPTOMETRY_SOCIETY = registerHead("qut_optometry_society", NEBlocks.QUT_OPTOMETRY_SOCIETY);
     public static final Item QUT_ACCOUNTANCY_ASSOCIATION = registerHead("qut_accountancy_association", NEBlocks.QUT_ACCOUNTANCY_ASSOCIATION);
@@ -227,23 +226,6 @@ public class NEItems {
     public static final Item QUT_ELECTRICAL_ENGINEERING = registerHead("qut_electrical_engineering", NEBlocks.QUT_ELECTRICAL_ENGINEERING);
     public static final Item QUT_MEDICAL_ENGINEERS = registerHead("qut_medical_engineers", NEBlocks.QUT_MEDICAL_ENGINEERS);
     public static final Item QUT_OPERATORS = registerHead("qut_operators", NEBlocks.QUT_OPERATORS);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public static final Item CORRUPCOLLECTABLE = registerHead("corrupcollectable", NEBlocks.CORRUPCOLLECTABLE);
 

@@ -71,7 +71,7 @@ public class NEAdvancementProvider extends FabricAdvancementProvider {
 //                .parent(twoHundredTaters)
 //        );
 
-        accept(consumer, "pride_taters", NEBlocks.GAY_COLLECTABLE, requiringTatersCollected(NEBlocks.ASEXUAL_COLLECTABLE, NEBlocks.BI_COLLECTABLE, NEBlocks.DEMISEXUAL_COLLECTABLE, NEBlocks.GAY_COLLECTABLE, NEBlocks.GENDERFLUID_COLLECTABLE, NEBlocks.LESBIAN_COLLECTABLE, NEBlocks.NONBINARY_COLLECTABLE, NEBlocks.PAN_COLLECTABLE, NEBlocks.TRANS_COLLECTABLE).parent(firstTater));
+        accept(consumer, "pride_collectables", NEBlocks.GAY_COLLECTABLE, requiringTatersCollected(NEBlocks.ASEXUAL_COLLECTABLE, NEBlocks.BI_COLLECTABLE, NEBlocks.DEMISEXUAL_COLLECTABLE, NEBlocks.GAY_COLLECTABLE, NEBlocks.GENDERFLUID_COLLECTABLE, NEBlocks.LESBIAN_COLLECTABLE, NEBlocks.NONBINARY_COLLECTABLE, NEBlocks.PAN_COLLECTABLE, NEBlocks.TRANS_COLLECTABLE).parent(firstTater));
 
     }
 

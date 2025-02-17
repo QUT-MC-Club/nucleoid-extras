@@ -174,19 +174,18 @@ public class NEBlocks {
     public static final Block QUT_CYBER_SECURITY_CLUB = registerTaterBlock("qut_cyber_security_club", ParticleTypes.POOF, "a1b80b11ae1f93be090558400a3c29fea1f3e9e8603f9a1927ba79f260cf9f05");
     public static final Block QUT_INTERIOR_DESIGN = registerTaterBlock("qut_interior_design", ParticleTypes.POOF, "9d16db3099e816341ba929334843648b37700c31042ee208c2443c240f3c74f");
     public static final Block QUT_MATHEMATICS_SOCIETY = registerTaterBlock("qut_mathematics_society", ParticleTypes.POOF, "432f44cd99de8e8be26b406e8b72d5bc6854bd0e6476a7f2d8b1408fc105e0dc");
-    public static final Block QUT_MUSIC_SOCIETY = registerTaterBlock("qut_music_society", ParticleTypes.POOF, "481e86289de6dec35d18905ff6cb27db31aef8b131f0ab3a357bdcb274daa9d3");
+    public static final Block QUT_MUSIC_SOCIETY = registerTateroidBlock("qut_music_society", SoundEvents.BLOCK_NOTE_BLOCK_BELL, -1, "481e86289de6dec35d18905ff6cb27db31aef8b131f0ab3a357bdcb274daa9d3");
     public static final Block QUT_MUSICAL_THEATRE_SOCIETY = registerTaterBlock("qut_musical_theatre_society", ParticleTypes.POOF, "76095f17c16d6471acf79cfdb31ce2dbe1734a0f864e3afec42c18abd8510fc1");
     public static final Block QUT_VENA_CAVA = registerTaterBlock("qut_vena_cava", ParticleTypes.POOF, "934b6599d044192f5dcdcebdd3334459be36c27f30de4c4e58ea7aa23f41ae88");
     public static final Block QUT_180_DEGREES_CONSULTING = registerTaterBlock("qut_180_degrees_consulting", ParticleTypes.POOF, "f19315b8f457cc4b5b29e733b42ea9c347c8d2d9c3380176fc5421dcc85b575");
-    public static final Block QUT_BIOMEDICAL_SCIENCE = registerTaterBlock("qut_biomedical_science", ParticleTypes.POOF, "56f9119a1d1fb01bb97db89aeba56ff5ee112079e432a2b50fa3a80a8954db38");
-    public static final Block QUT_CODE_NETWORK = registerTaterBlock("qut_code_network", ParticleTypes.POOF, "6683de926abc7e63c256e3213b14b58d38384315c83d5a9bad13e1d859f09977");
+    public static final Block QUT_CODE_NETWORK = registerColorTaterBlock("qut_code_network", 0x34CC3C, "1e8e815f7408e0c12d7846c1554f078286e264bea98cf459fab1e3d3acbfa399");
     public static final Block QUT_OPTOMETRY_SOCIETY = registerTaterBlock("qut_optometry_society", ParticleTypes.POOF, "9e68222509bd3e0fb079fa5f8b816f21222536efd53c30dbba9d2ef46d76a9fc");
     public static final Block QUT_ACCOUNTANCY_ASSOCIATION = registerTaterBlock("qut_accountancy_association", ParticleTypes.POOF, "80118baf8ae1bac6275d7b719c7cd89c58d702b4fa29d6f8bccdbf0c4d3fb5f6");
     public static final Block QUT_BADMINTON = registerTaterBlock("qut_badminton", ParticleTypes.POOF, "164628b0612abdf7647e724c0d33dcffc70696fed20459cdf0a504dae944b6b5");
     public static final Block QUT_BIG_LIFT = registerTaterBlock("qut_big_lift", ParticleTypes.POOF, "b9aa1c59d9b1ffc281d7a6d954d53e10aba331b3b5113f9bb15ffe2c338a4834");
     public static final Block QUT_BOOKCLUB = registerTaterBlock("qut_bookclub", ParticleTypes.POOF, "70adabfd874d098dceaff97e2371446bfa6fe8a6018a1c07ebe152cb525bc654");
     public static final Block QUT_BUSINESS_ANALYSIS = registerTaterBlock("qut_business_analysis", ParticleTypes.POOF, "9ffd75ba2cfccce4ca39ad23f5fce3d9f4145eec97bb669ee996f778c9f312a6");
-    public static final Block QUT_CHEMISTRY_CLUB = registerTaterBlock("qut_chemistry_club", ParticleTypes.POOF, "6c5830e0bdc0aa4b6ee77b82939ea5c3b067295aee55bcb2cd8321082402e790");
+    public static final Block QUT_CHEMISTRY_CLUB = registerTaterBlock("qut_chemistry_club", ParticleTypes.POOF, "56f9119a1d1fb01bb97db89aeba56ff5ee112079e432a2b50fa3a80a8954db38");
     public static final Block QUT_ELECTRICAL_ENGINEERING = registerTaterBlock("qut_electrical_engineering", ParticleTypes.POOF, "5bec20aa92f28ee406c9b8521553eb131d8956d23bbb7779d84a99b0b10110a5");
     public static final Block QUT_MEDICAL_ENGINEERS = registerTaterBlock("qut_medical_engineers", ParticleTypes.POOF, "c74c1ccb03ef6bebb7dc7292327f7e3e37d9c06f569d527f8ca9c761f1878a4e");
     public static final Block QUT_OPERATORS = registerTaterBlock("qut_operators", ParticleTypes.POOF, "e9993fc628f34c4dd288905e2f5fa1d42afc23495a36ce027c070bcb5d241044");
@@ -214,8 +213,7 @@ public class NEBlocks {
     public static final BlockEntityType<ContributorStatueBlockEntity> CONTRIBUTOR_STATUE_ENTITY = FabricBlockEntityTypeBuilder.create(ContributorStatueBlockEntity::new, CONTRIBUTOR_STATUE).build();
     public static final BlockEntityType<InfiniteDispenserBlockEntity> INFINITE_DISPENSER_ENTITY = FabricBlockEntityTypeBuilder.create(InfiniteDispenserBlockEntity::new, INFINITE_DISPENSER).build();
     public static final BlockEntityType<InfiniteDropperBlockEntity> INFINITE_DROPPER_ENTITY = FabricBlockEntityTypeBuilder.create(InfiniteDropperBlockEntity::new, INFINITE_DROPPER).build();
-    // these are currently unused:
-    public static final BlockEntityType<TateroidBlockEntity> TATEROID_ENTITY = FabricBlockEntityTypeBuilder.create(TateroidBlockEntity::new).build();
+    public static final BlockEntityType<TateroidBlockEntity> TATEROID_ENTITY = FabricBlockEntityTypeBuilder.create(TateroidBlockEntity::new, QUT_MUSIC_SOCIETY).build();
     public static final BlockEntityType<DaylightDetectorTaterBlockEntity> DAYLIGHT_DETECTOR_TATER_ENTITY = FabricBlockEntityTypeBuilder.create(DaylightDetectorTaterBlockEntity::new).build();
     public static final BlockEntityType<BellTaterBlockEntity> BELL_TATER_ENTITY = FabricBlockEntityTypeBuilder.create(BellTaterBlockEntity::new).build();
 
