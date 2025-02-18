@@ -25,19 +25,19 @@ public final class NucleoidSidebar {
 
     public static final RegistryKey<World> DIMENSION = World.OVERWORLD;
 
-    private static final Style MAIN_TITLE_STYLE = Style.EMPTY.withColor(0x800080).withBold(true);
+    private static final Style MAIN_TITLE_STYLE = Style.EMPTY.withColor(0x0066B9).withBold(true);
     private static final Style FLASH_TITLE_STYLE = Style.EMPTY.withColor(0xffffff);
-    private static final Style ALT_TITLE_STYLE = Style.EMPTY.withColor(0x00bf59).withBold(true);
+    private static final Style ALT_TITLE_STYLE = Style.EMPTY.withColor(0x009DE0).withBold(true);
 
     private static final Style TOP_SIDEBAR_STYLE = Style.EMPTY.withColor(0xfff173);
     private static final Style GAME_TITLE_STYLE = Style.EMPTY.withColor(0xffac12);
     private static final Style GAME_COUNT_STYLE = Style.EMPTY.withColor(0xcccccc);
     private static final Style LINK_STYLE = Style.EMPTY.withColor(0x94eeff);
 
-    private static final String NAME = "Nucleoid";
+    private static final String NAME = "QUTMC";
     private static final Text DEV_TITLE = Text.literal(" (DEV)").setStyle(Style.EMPTY.withColor(0xbf0059));
 
-    private static final Text NAME_APPEND = Text.literal(".xyz").setStyle(Style.EMPTY.withColor(Formatting.WHITE).withBold(false));
+    private static final Text NAME_APPEND = Text.literal(".club").setStyle(Style.EMPTY.withColor(Formatting.WHITE).withBold(false));
 
     private static final Text TITLE_MAIN = Text.literal(NAME).setStyle(MAIN_TITLE_STYLE).append(NAME_APPEND);
     private static final Text TITLE_ALT = Text.literal(NAME).setStyle(ALT_TITLE_STYLE).append(NAME_APPEND);

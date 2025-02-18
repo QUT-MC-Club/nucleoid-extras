@@ -1,5 +1,5 @@
 {
-  "text.nucleoid_extras.name": "Nucleoid Extras",
+  "text.nucleoid_extras.name": "QUTMC Extras",
 
   "nucleoid.sidebar.welcome": "Welcome %s!",
   "nucleoid.sidebar.player_in_game.1": "%s player online!",
@@ -14,7 +14,7 @@
 
   "nucleoid.sidebar.join.1": "Join with %s...",
   "nucleoid.sidebar.join.2": "...or by using the compass!",
-  "nucleoid.discord": "nucleoid.xyz/discord",
+  "nucleoid.discord": "qutmc.club/discord",
   "nucleoid.stop.scheduled": "Server restart has been scheduled! The server will restart in %s minutes, or when all games exit.",
   "nucleoid.stop.scheduled.already": "Server restart has already been scheduled.",
   "nucleoid.stop.game.open": "Cannot join this game: a server stop has been scheduled!",
@@ -179,7 +179,7 @@
 
   "text.nucleoid_extras.ui.action.more": "Right-click for more...",
 
-  "text.nucleoid_extras.wrapped.join": "Nucleoid Wrapped %s is here! Click here to open our website and see yours!",
+  "text.nucleoid_extras.wrapped.join": "QUTMC Wrapped %s is here! Click here to open our website and see yours!",
 
   "text.nucleoid_extras.rules.continued_title": "%s (cont.)",
   "text.nucleoid_extras.rules.welcome": "Welcome to %s!\n\nWe're building open-source minigames.",
