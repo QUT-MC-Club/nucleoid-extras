@@ -178,7 +178,7 @@ public class NEBlocks {
     public static final Block QUT_MUSICAL_THEATRE_SOCIETY = registerTaterBlock("qut_musical_theatre_society", ParticleTypes.POOF, "76095f17c16d6471acf79cfdb31ce2dbe1734a0f864e3afec42c18abd8510fc1");
     public static final Block QUT_VENA_CAVA = registerTaterBlock("qut_vena_cava", ParticleTypes.POOF, "934b6599d044192f5dcdcebdd3334459be36c27f30de4c4e58ea7aa23f41ae88");
     public static final Block QUT_180_DEGREES_CONSULTING = registerTaterBlock("qut_180_degrees_consulting", ParticleTypes.POOF, "f19315b8f457cc4b5b29e733b42ea9c347c8d2d9c3380176fc5421dcc85b575");
-    public static final Block QUT_CODE_NETWORK = registerColorTaterBlock("qut_code_network", 0x34CC3C, "1e8e815f7408e0c12d7846c1554f078286e264bea98cf459fab1e3d3acbfa399");
+    public static final Block QUT_CODE_NETWORK = registerColorTaterBlock("qut_code_network", 0x34CC3C, "470244e0d656bad617564d7ca08f9211004247fcdf1e3cacc849c5278e8c3998");
     public static final Block QUT_OPTOMETRY_SOCIETY = registerTaterBlock("qut_optometry_society", ParticleTypes.POOF, "9e68222509bd3e0fb079fa5f8b816f21222536efd53c30dbba9d2ef46d76a9fc");
     public static final Block QUT_ACCOUNTANCY_ASSOCIATION = registerTaterBlock("qut_accountancy_association", ParticleTypes.POOF, "80118baf8ae1bac6275d7b719c7cd89c58d702b4fa29d6f8bccdbf0c4d3fb5f6");
     public static final Block QUT_BADMINTON = registerTaterBlock("qut_badminton", ParticleTypes.POOF, "164628b0612abdf7647e724c0d33dcffc70696fed20459cdf0a504dae944b6b5");
