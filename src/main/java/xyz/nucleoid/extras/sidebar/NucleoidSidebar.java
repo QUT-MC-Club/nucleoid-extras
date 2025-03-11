@@ -106,7 +106,7 @@ public final class NucleoidSidebar {
                 if (p != null) {
                     return Text.literal("» ").append(
                             Text.translatable("nucleoid.sidebar.welcome",
-                                    Text.empty().formatted(Formatting.WHITE).append(p.getStyledDisplayName())
+                                    Text.empty().formatted(Formatting.WHITE).append(p.get())
                             ).setStyle(TOP_SIDEBAR_STYLE)
                     ).formatted(Formatting.GRAY);
                 } else {
