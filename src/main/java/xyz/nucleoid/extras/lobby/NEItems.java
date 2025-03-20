@@ -307,17 +307,17 @@ public class NEItems {
     public static void giveLobbyItems(ServerPlayerEntity player) {
         var config = NucleoidExtrasConfig.get();
 
-        tryOfferStack(player, TATER_BOX);
-
-        if (config.rules() != null) {
-            tryOfferStack(player, RULE_BOOK);
-        }
-
         config.gamePortalOpener().ifPresent(gamePortal -> {
             tryOfferStack(player, GAME_PORTAL_OPENER, stack -> {
                 stack.set(NEDataComponentTypes.GAME_PORTAL, new GamePortalComponent(gamePortal));
             });
         });
+
+        if (config.rules() != null) {
+            tryOfferStack(player, RULE_BOOK);
+        }
+
+        tryOfferStack(player, TATER_BOX);
     }
 
     public static boolean canUseTaters(ServerPlayerEntity player) {
